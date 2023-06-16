@@ -1,0 +1,8 @@
+@import "./_mixin.scss";
+
+.vm-detail-header {
+  @include radius($size: 4px 4px 0 0, $bg: #F9FBFD, $shadow: none);
+  width: 393px;
+  min-height: 152px;
+  padding: 12px;
+}
