@@ -1,8 +1,107 @@
-@import "./_mixin.scss";
+@import "./_mixin";
+
+.vm-detail-wrap {
+  @include flex($justify: flex-start, $align: flex-start, $gap: 26px);
+
+  > section {
+    flex: 1;
+  }
+
+  h2.h2-default {
+    font-size: 14px;
+  }
+}
 
 .vm-detail-header {
   @include radius($size: 4px 4px 0 0, $bg: #F9FBFD, $shadow: none);
   width: 393px;
   min-height: 152px;
   padding: 12px;
+
+  .btn-group {
+    @include flex($justify: flex-start, $gap: 10px);
+
+    padding: 10px;
+  }
+}
+
+.vm-detail-body {
+  @include radius($size: 0 0 4px 4px, $bg: #ffffff, $shadow: none);
+  width: 393px;
+  padding: 12px;
+}
+
+.tab-content {
+  margin-top: 12px;
+}
+
+.bg-darkgray {
+  .status-list {
+    li {
+      strong {
+        color: #F9FBFD;
+      }
+      span {
+        color: #79879C;
+      }
+    }
+  }
+}
+
+.status-list {
+  @include flex($justify: flex-start, $gap: 12px);
+
+  li {
+    @include flex($justify: flex-start, $gap: 12px);
+
+    padding: 10px;
+
+    div {
+      @include flex($direction: column, $align: flex-start)
+    }
+
+    .icon {
+      @include flex($justify: center);
+
+      width: 40px;
+      height: 40px;
+
+      &.lg {
+        width: 54px;
+        height: 54px;
+        margin-right: 12px;
+      }
+    }
+
+    strong {
+      line-height: 20px;
+      color: #242E42;
+      font-size: 12px;
+      font-weight: 700;
+
+      &.normal:before {
+        content: '●';
+        color: #fff;
+        margin-right: 3px;
+      }
+
+      &.warning:before {
+        content: '●';
+        color: yellow;
+        margin-right: 3px;
+      }
+
+      &.error:before {
+        content: '●';
+        color: red;
+        margin-right: 3px;
+      }
+    }
+
+    span {
+      line-height: 20px;
+      color: #79879C;
+      font-size: 12px;
+    }
+  }
 }

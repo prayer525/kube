@@ -154,6 +154,11 @@ textarea {
     border: 0;
 }
 
+legend,
+caption {
+    display: none;
+}
+
 button {
     cursor: pointer;
 }
