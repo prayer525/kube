@@ -91,6 +91,43 @@
   position: relative;
   border: 1px solid #EFF4F9;
   padding: 8px 10px;
+
+  button {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+
+    span {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      user-select: none;
+    }
+
+    &.btn-prev {
+      left: 10px;
+      background: transparent url('../images/icons/ico-arrow-left-on.svg') center no-repeat;
+    }
+
+    &.btn-next {
+      right: 10px;
+      background: transparent url('../images/icons/ico-arrow-right-on.svg') center no-repeat;
+    }
+
+    &.btn-prev:disabled {
+      background: transparent url('../images/icons/ico-arrow-left-off.svg') center no-repeat;
+    }
+
+    &.btn-next:disabled {
+      background: transparent url('../images/icons/ico-arrow-right-off.svg') center no-repeat;
+    }
+  }
+
 }
 
 .os-item-list {
@@ -111,19 +148,26 @@
   label {
     @include radius($bg: #F9FBFD, $shadow: none);
 
+    display: block;
     border: 1px solid #D1D7DF;
     width: 95px;
     height: 102px;
     color: #36435C;
     font-size: 12px;
+    text-align: center;
     padding: 14px 0;
+    cursor: pointer;
 
     span {
       @include flex($justify: center);
 
       width: 50px;
       height: 50px;
-      margin: 0 auto;
+      margin: 0 auto 12px;
     }
+  }
+
+  input:checked + label {
+    background: #FFFFFF;
   }
 }

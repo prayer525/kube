@@ -69,7 +69,7 @@ const CommonImage = () => {
               <div className="tab-type-round">
                 <ul>
                   <li>
-                    <input type="radio" name="round-tab" id="round-tab-1" />
+                    <input type="radio" name="round-tab" id="round-tab-1" checked />
                     <label htmlFor="round-tab-1">이미지</label>
                   </li>
                   <li>
@@ -80,14 +80,15 @@ const CommonImage = () => {
               </div>
             </div>
 
-            <div className="d-flex flex-1 gap-24">
+            <div className="d-flex flex-1 gap-24 align-start">
               <div className="form-box">
                 <label htmlFor="" aria-required>이미지</label>
 
+                {/* Start : Image Select */}
                 <div className="swiper-os-item-wrap">
                   <ul className="os-item-list">
                     <li>
-                      <input type="radio" name="slide-item" id="slide-item-1" />
+                      <input type="radio" name="slide-item" id="slide-item-1" checked />
                       <label htmlFor="slide-item-1">
                         <span><IconOSLinux /></span>
                         Linux
@@ -108,8 +109,15 @@ const CommonImage = () => {
                       </label>
                     </li>
                   </ul>
+
+                  <button type="button" className="btn-prev" disabled><span>이전</span></button>
+                  <button type="button" className="btn-next"><span>다음</span></button>
                 </div>
+                {/* End : Image Select */}
+
+
               </div>
+
 
               <div className="form-box">
                 <label htmlFor="">이미지 유형</label>
