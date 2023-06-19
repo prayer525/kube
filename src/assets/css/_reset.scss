@@ -100,7 +100,10 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+input,
+select,
+button {
     margin: 0;
     padding: 0;
     border: 0;
@@ -152,6 +155,7 @@ textarea {
     background-color: transparent;
     outline: none;
     border: 0;
+    padding: 0;
 }
 
 legend,
@@ -161,6 +165,10 @@ caption {
 
 button {
     cursor: pointer;
+
+    svg {
+        display: block;
+    }
 }
 
 body {

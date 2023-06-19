@@ -19,6 +19,20 @@
 
 .d-flex {
   @include flex();
+
+  &.gap-24 {
+    gap: 24px;
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.flex-1 {
+    > * {
+      flex: 1
+    }
+  }
 }
 
 .box-radius {
@@ -72,6 +86,7 @@ h2.h2-bullet-home {
   background: #EFF4F9;
   width: 100px;
   height: 32px;
+  line-height: 20px;
   color: #36435C;
   font-size: 12px;
   font-weight: 700;
@@ -88,20 +103,20 @@ h2.h2-bullet-home {
   }
 }
 
-// Select
-select {
-  border: 1px solid #ABB4BE;
-  border-radius: 4px;
-  background: #FFFFFF url('../images/icons/ico-arrow-down.svg') right 15px center no-repeat;
-  width: 120px;
-  height: 42px;
-  color: #36435C;
+// Description
+p.caution {
+  position: relative;
+  line-height: 20px;
+  color:  #79879C;
   font-size: 12px;
-  padding: 6px 12px;
+  padding-left: 20px;
+  margin-top: 4px;
 
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
-  appearance:none;
+  svg {
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
 }
 
 // Button type select
@@ -214,6 +229,7 @@ select {
   }
 }
 
+// Tab
 .tab-type-basic {
   @include flex($justify: flex-start, $align: middle, $gap: 10px);
   @include radius($bg: #242E42);
@@ -247,4 +263,188 @@ select {
   input:checked + label {
     background: #55BC8A;
   }
+}
+
+.tab-type-round {
+  @include flex($justify: flex-start);
+
+  ul {
+    @include flex($justify: flex-start);
+    @include radius($size: 16px, $bg: #F9FBFD, $shadow: none);
+
+    border: 1px solid #CCD3DB;
+    padding: 1px;
+    flex: 0 0 auto;
+  }
+
+  li {
+    position: relative;
+    flex: 0 0 auto;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    label {
+      display: block;
+      border-radius: 14px;
+      width: 120px;
+      height: 28px;
+      line-height: 28px;
+      color: #36435C;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    input:checked + label {
+      background: #36435C;
+      color: #FFFFFF;
+    }
+  }
+}
+
+// Progress
+.progress-card {
+  @include flex();
+
+  flex-wrap: nowrap;
+  background: #EFF4F9;
+  padding: 0 20px;
+
+  li {
+    @include flex($justify: flex-start, $gap: 12px);
+
+    flex: 1;
+    padding: 12px 15px;
+
+    &.current,
+    &.complete {
+      background: #fff;
+
+      .icon:after {
+        border-color: #55BC8A;
+      }
+    }
+
+    &.complete {
+      .icon:after {
+        background: #55BC8A;
+      }
+    }
+  }
+
+  .icon {
+    @include flex($justify: center);
+
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border: 2px solid #CCD3DB;
+      border-radius: 6px;
+      background: #FFFFFF;
+      width: 12px;
+      height: 12px;
+      box-sizing: border-box;
+    }
+  }
+
+  span,
+  strong {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #242E42;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  span {
+    color: #79879C;
+    font-weight: 400;
+  }
+}
+
+// Form
+.form-box {
+  margin-bottom: 24px;
+
+  > label {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    color: #36435C;
+    font-size: 12px;
+    margin-bottom: 4px;
+
+    &[aria-required]:after {
+      content: '*';
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #CA2621;
+      transform: translate(10px, -4px);
+    }
+  }
+
+  .input-byte {
+    position: relative;
+    width: 100%;
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      color: #79879C;
+      font-size: 11px;
+      transform: translateY(-50%);
+    }
+  }
+
+  input[type="text"] {
+    border: 1px solid #ABB4BE;
+    border-radius: 4px;
+    background: #FFFFFF;
+    width: 100%;
+    height: 32px;
+    color: #36435C;
+    font-size: 12px;
+    padding: 0 50px 0 12px;
+
+    &::placeholder {
+      color: #79879C;
+      font-size: 12px;
+    }
+  }
+}
+
+// Select
+select {
+  border: 1px solid #ABB4BE;
+  border-radius: 4px;
+  background: #FFFFFF url('../images/icons/ico-arrow-down.svg') right 15px center no-repeat;
+  width: 120px;
+  height: 42px;
+  color: #36435C;
+  font-size: 12px;
+  padding: 6px 12px;
+
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
 }
