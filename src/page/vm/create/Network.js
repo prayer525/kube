@@ -2,12 +2,15 @@ import {ReactComponent as BtnClose} from "../../../assets/images/icons/ico-close
 import {ReactComponent as IconFileGray} from "../../../assets/images/icons/ico-file-gray.svg"
 import {ReactComponent as IconPathfindGray} from "../../../assets/images/icons/ico-pathfind-gray.svg"
 import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ico-hexagon-gray.svg"
+import {ReactComponent as IconClose} from "../../../assets/images/icons/ico-close-small.svg"
 
 const CommonImage = () => {
   return (<>
+    {/*
+      If "modal-wrap" has class "scrollable" then "modal-body" will scroll.
+      <section className="modal-wrap scrollable">
+    */}
     <section className="modal-wrap">
-      <div className="back-panel">{/* for modal close when click on background */}</div>
-
       {/* Start : Modal */}
       <article className="modal">
         {/* Start : Modal Header */}
@@ -176,12 +179,32 @@ const CommonImage = () => {
                   </table>
                   </div>
                 </div>
+
+                <div className="d-flex nowrap align-start gap-4">
+                  <div className="badge-item-wrap">
+                    <ul className="badge-item-list nowrap">
+                      <li>
+                        <span>INT 64_A</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                      <li>
+                        <span>INT 64_A</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="d-flex gap-4 flex-0">
+                    <button type="button" className="btn">선택 해제</button>
+                    <button type="button" className="btn">삭제</button>
+                  </div>
+                </div>
               </div>
             </div>
             {/* End : Network */}
 
             {/* Start : SR-IOV 네트워크 */}
-            <div className="content-box">
+            <div className="content-box m-0">
               <label htmlFor="">SR-IOV 네트워크</label>
 
               <div className="box-radius bg-lightgray none-shadow p-12">
@@ -307,6 +330,43 @@ const CommonImage = () => {
                       </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+
+                <div className="d-flex nowrap align-start gap-4">
+                  <div className="badge-item-wrap">
+                    <ul className="badge-item-list nowrap">
+                      <li>
+                        <span>Kubevirtworkerens1f_01</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                      <li>
+                        <span>Kubevirtworkerens1f_01</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                      <li>
+                        <span>Kubevirtworkerens1f_01</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                      <li>
+                        <span>Kubevirtworkerens1f_01</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                      <li>
+                        <span>Kubevirtworkerens1f_01</span>
+                        <button type="button"><IconClose /></button>
+                      </li>
+                    </ul>
+
+                    <div className="control">
+                      <button type="button" className="btn-prev" disabled><span>prev</span></button>
+                      <button type="button" className="btn-next"><span>next</span></button>
+                    </div>
+                  </div>
+
+                  <div className="d-flex gap-4 flex-0">
+                    <button type="button" className="btn">선택 해제</button>
+                    <button type="button" className="btn">삭제</button>
                   </div>
                 </div>
               </div>

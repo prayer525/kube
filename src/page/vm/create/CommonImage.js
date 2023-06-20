@@ -10,11 +10,13 @@ import {ReactComponent as IconUbuntu} from "../../../assets/images/icons/ico-ubu
 
 const CommonImage = () => {
   return (<>
+    {/*
+      If "modal-wrap" has class "scrollable" then "modal-body" will scroll.
+      <section className="modal-wrap scrollable">
+    */}
     <section className="modal-wrap">
-      <div className="back-panel">{/* for modal close when click on background */}</div>
-
       {/* Start : Modal */}
-      <article className="modal">
+      <article className="modal scrollable">
         {/* Start : Modal Header */}
         <div className="modal-header">
           <h2 className="modal-title">가상 머신 생성</h2>

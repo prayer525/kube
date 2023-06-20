@@ -6,9 +6,11 @@ import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-
 
 const CommonBoot = () => {
   return (<>
+    {/*
+      If "modal-wrap" has class "scrollable" then "modal-body" will scroll.
+      <section className="modal-wrap scrollable">
+    */}
     <section className="modal-wrap">
-      <div className="back-panel">{/* for modal close when click on background */}</div>
-
       {/* Start : Modal */}
       <article className="modal">
         {/* Start : Modal Header */}
@@ -68,11 +70,11 @@ const CommonBoot = () => {
               <div className="tab-type-round">
                 <ul>
                   <li>
-                    <input type="radio" name="round-tab" id="round-tab-1" checked />
+                    <input type="radio" name="round-tab" id="round-tab-1" />
                     <label htmlFor="round-tab-1">이미지</label>
                   </li>
                   <li>
-                    <input type="radio" name="round-tab" id="round-tab-2" />
+                    <input type="radio" name="round-tab" id="round-tab-2" checked />
                     <label htmlFor="round-tab-2">부트 볼륨</label>
                   </li>
                 </ul>

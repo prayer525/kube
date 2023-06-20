@@ -209,12 +209,26 @@ table {
     width: 100%;
 }
 
-::-webkit-scrollbar,
-::-webkit-scrollbar-track {
-    background: transparent;
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(24, 29, 40, 0.2) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 6px;
 }
-::-webkit-scrollbar-thumb {
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar:horizontal{
+    height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

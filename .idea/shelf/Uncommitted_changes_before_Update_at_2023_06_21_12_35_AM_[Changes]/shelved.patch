@@ -1,0 +1,87 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"0e777d84-9f1b-474d-a2f8-812300cfaaea\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-off.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-on.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-off.svg\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-on.svg\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/assets/css/_modal.scss\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/assets/css/_modal.scss\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/page/vm/create/CommonImage.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/page/vm/create/CommonImage.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2RQlNDffk6QxlRfSwI2TYtBBj9X\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"main\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"yarn\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/assets/images/icons\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"start\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"start\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"npm.start\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"0e777d84-9f1b-474d-a2f8-812300cfaaea\" name=\"Changes\" comment=\"\" />\n      <created>1687190144997</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1687190144997</updated>\n      <workItem from=\"1687190146083\" duration=\"1591000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bacfcfa47dd1a0706f1ef9063e423bebdcf27b61)
++++ b/.idea/workspace.xml	(date 1687275311294)
+@@ -4,15 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="0e777d84-9f1b-474d-a2f8-812300cfaaea" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-off.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-on.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-off.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-on.svg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/assets/css/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_modal.scss" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/page/vm/create/CommonImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/vm/create/CommonImage.js" afterDir="false" />
+-    </list>
++    <list default="true" id="0e777d84-9f1b-474d-a2f8-812300cfaaea" name="Changes" comment="#feat : os image 선택 추가" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -29,19 +21,19 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "main",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "yarn",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/assets/images/icons" />
+@@ -72,8 +64,16 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1687190144997</updated>
+-      <workItem from="1687190146083" duration="1591000" />
++      <workItem from="1687190146083" duration="1806000" />
+     </task>
++    <task id="LOCAL-00001" summary="#feat : os image 선택 추가">
++      <created>1687191921362</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1687191921362</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -90,4 +90,8 @@
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="#feat : os image 선택 추가" />
++    <option name="LAST_COMMIT_MESSAGE" value="#feat : os image 선택 추가" />
++  </component>
+ </project>
+\ No newline at end of file
