@@ -208,3 +208,16 @@ table {
     border-spacing: 0;
     width: 100%;
 }
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    background: transparent;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: rgba(24, 29, 40, 0.2);
+    width: 6px;
+}

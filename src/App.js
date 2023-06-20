@@ -7,7 +7,9 @@ import DetailComposition from "./page/vm/detail/Composition";
 import DetailMonitoring from "./page/vm/detail/Monitoring";
 import DetailEvent from "./page/vm/detail/Event";
 
-import CreateCommonImage from './page/vm/create/CommonImage'
+import CreateCommonImage from './page/vm/create/CommonImage';
+import CreateCommonBoot from './page/vm/create/CommonBoot';
+import CreateNetwork from './page/vm/create/Network';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/vm/detail/event" element={<DetailEvent />} />
 
         <Route path="/vm/create/common-image" element={<CreateCommonImage />} />
+        <Route path="/vm/create/common-boot" element={<CreateCommonBoot />} />
+        <Route path="/vm/create/network" element={<CreateNetwork />} />
       </Route>
     </Routes>
   );

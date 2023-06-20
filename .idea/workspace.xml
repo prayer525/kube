@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e777d84-9f1b-474d-a2f8-812300cfaaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-left-on.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-arrow-right-on.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="0e777d84-9f1b-474d-a2f8-812300cfaaea" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-checkbox-off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-checkbox-on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/ico-ubuntu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/vm/create/CommonBoot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/vm/create/Network.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/_modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/vm/create/CommonImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/vm/create/CommonImage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +22,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Sass File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,9 +48,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/mtn/study/kube/src/page/vm/create",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +62,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/page/vm/create" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images/icons" />
     </key>
@@ -73,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687190144997</updated>
       <workItem from="1687190146083" duration="1591000" />
+      <workItem from="1687219948834" duration="7553000" />
     </task>
     <servers />
   </component>
@@ -89,5 +112,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#fix : init 페이지 적용" />
+    <MESSAGE value="#feat : 6월 19일 작업 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="#feat : 6월 19일 작업 1" />
   </component>
 </project>

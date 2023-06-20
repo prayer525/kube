@@ -3,12 +3,8 @@ import {ReactComponent as IconFileGray} from "../../../assets/images/icons/ico-f
 import {ReactComponent as IconPathfindGray} from "../../../assets/images/icons/ico-pathfind-gray.svg"
 import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ico-hexagon-gray.svg"
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
-import {ReactComponent as IconOSLinux} from "../../../assets/images/icons/ico-linux.svg"
-import {ReactComponent as IconOSWindows} from "../../../assets/images/icons/ico-windows.svg"
-import {ReactComponent as IconOSOther} from "../../../assets/images/icons/ico-server-other.svg"
-import {ReactComponent as IconUbuntu} from "../../../assets/images/icons/ico-ubuntu.svg"
 
-const CommonImage = () => {
+const CommonBoot = () => {
   return (<>
     <section className="modal-wrap">
       <div className="back-panel">{/* for modal close when click on background */}</div>
@@ -88,54 +84,17 @@ const CommonImage = () => {
             <div className="d-flex flex-1 gap-24 align-start">
               {/* Start : Image */}
               <div className="content-box">
-                <label htmlFor="" aria-required>이미지</label>
+                <label htmlFor="" aria-required>부트 볼륨</label>
 
-                {/* Start : Image Select */}
-                <div className="swiper-os-item-wrap">
-                  <ul className="os-item-list">
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-1" />
-                      <label htmlFor="slide-item-1">
-                        <span><IconOSLinux /></span>
-                        Linux
-                      </label>
-                    </li>
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-2" />
-                      <label htmlFor="slide-item-2">
-                        <span><IconOSWindows /></span>
-                        Windows
-                      </label>
-                    </li>
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-3" />
-                      <label htmlFor="slide-item-3">
-                        <span><IconOSOther /></span>
-                        Other
-                      </label>
-                    </li>
-                  </ul>
-
-                  <button type="button" className="btn-prev" disabled><span>이전</span></button>
-                  <button type="button" className="btn-next"><span>다음</span></button>
-                </div>
-                {/* End : Image Select */}
-
-                {/* Start : Multi line select-box */}
+                {/* Start : Single line select-box */}
                 <div className="select-list-box">
-                  <div className="selected-item">
-                    <i className="icon"><IconUbuntu /></i>
+                  <div className="selected-item single">
                     <p>
-                      <strong>Ubuntu 20.04</strong>
-                      <span>64비트 (x86)</span>
+                      <strong>DSWEWE</strong>
                     </p>
                   </div>
                 </div>
                 {/* End : Multi line select-box */}
-
-                <p className="caution">
-                  <IconInfo />가상 머신 생성을 위한 운영 체제 이미지를 선택해주세요
-                </p>
               </div>
               {/* End : Image */}
 
@@ -190,4 +149,4 @@ const CommonImage = () => {
   </>)
 }
 
-export default CommonImage
+export default CommonBoot

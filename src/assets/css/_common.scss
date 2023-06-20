@@ -4,6 +4,14 @@
   padding: 12px;
 }
 
+.px-12 {
+  padding: 0 12px;
+}
+
+.py-12 {
+  padding: 12px 0;
+}
+
 .mb-12 {
   margin-bottom: 12px;
 }
@@ -229,6 +237,73 @@ p.caution {
   }
 }
 
+.fixed-head-wrap {
+  max-height: 312px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.tbl-list {
+  position: relative;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  thead {
+    position: relative;
+    z-index: 20;
+
+    th {
+      position: sticky;
+      top: 0;
+      background: #FFFFFF;
+      text-align: left;
+      padding: 16px 12px;
+
+      strong {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        color: #79879C;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  tbody {
+    position: relative;
+    z-index: 10;
+
+    td {
+      border-bottom: 1px solid #EFF4F9;
+      background: #FFFFFF;
+      text-align: left;
+      padding: 16px 12px;
+
+      p {
+        @include ellipsis();
+
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        color: #242E42;
+        font-size: 12px;
+      }
+    }
+
+    tr:last-child {
+      td {
+        border: none;
+      }
+    }
+    tr:hover {
+      td {
+        background: #EFF4F9;
+      }
+    }
+  }
+}
+
 // Tab
 .tab-type-basic {
   @include flex($justify: flex-start, $align: middle, $gap: 10px);
@@ -308,79 +383,8 @@ p.caution {
   }
 }
 
-// Progress
-.progress-card {
-  @include flex();
-
-  flex-wrap: nowrap;
-  background: #EFF4F9;
-  padding: 0 20px;
-
-  li {
-    @include flex($justify: flex-start, $gap: 12px);
-
-    flex: 1;
-    padding: 12px 15px;
-
-    &.current,
-    &.complete {
-      background: #fff;
-
-      .icon:after {
-        border-color: #55BC8A;
-      }
-    }
-
-    &.complete {
-      .icon:after {
-        background: #55BC8A;
-      }
-    }
-  }
-
-  .icon {
-    @include flex($justify: center);
-
-    position: relative;
-    width: 40px;
-    height: 40px;
-
-    svg {
-      display: block;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      border: 2px solid #CCD3DB;
-      border-radius: 6px;
-      background: #FFFFFF;
-      width: 12px;
-      height: 12px;
-      box-sizing: border-box;
-    }
-  }
-
-  span,
-  strong {
-    display: block;
-    height: 20px;
-    line-height: 20px;
-    color: #242E42;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  span {
-    color: #79879C;
-    font-weight: 400;
-  }
-}
-
 // Form
-.form-box {
+.content-box {
   margin-bottom: 24px;
 
   > label {
@@ -447,4 +451,99 @@ select {
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
   appearance:none;
+}
+
+.select-list-box {
+  position: relative;
+}
+
+.selected-item {
+  @include flex($justify: flex-start, $gap: 12px);
+
+  border: 1px solid #ABB4BE;
+  border-radius: 4px;
+  background: #FFFFFF url('../images/icons/ico-arrow-down.svg') right 15px center no-repeat;
+  padding: 11px 12px;
+  cursor: pointer;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  p {
+    user-select: none;
+  }
+
+  strong {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #36435C;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #79879C;
+    font-size: 12px;
+  }
+
+  &.single {
+    padding: 6px 12px;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    strong {
+      font-weight: 400;
+    }
+  }
+}
+
+// Checkbox
+.form-check {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  label {
+    @include flex($justify: flex-start, $align: flex-start, $gap: 8px);
+
+    line-height: 20px;
+    color: #36435C;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:before {
+      display: block;
+      content: '';
+      background: transparent url('../images/icons/ico-checkbox-off.svg') center no-repeat;
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+    }
+  }
+
+  input:checked + label {
+    &:before {
+      background: transparent url('../images/icons/ico-checkbox-on.svg') center no-repeat;
+    }
+  }
 }
