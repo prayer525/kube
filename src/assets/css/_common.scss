@@ -488,7 +488,7 @@ select {
   border: 1px solid #ABB4BE;
   border-radius: 4px;
   background: #FFFFFF url('../images/icons/ico-arrow-down.svg') right 15px center no-repeat;
-  padding: 11px 12px;
+  padding: 11px 34px 11px 12px;
   cursor: pointer;
 
   .icon {
@@ -521,7 +521,7 @@ select {
   }
 
   &.single {
-    padding: 6px 12px;
+    padding: 6px 34px 6px 12px;
 
     .icon {
       display: flex;
@@ -533,6 +533,17 @@ select {
 
     strong {
       font-weight: 400;
+    }
+  }
+
+  &.multi {
+    p {
+      @include flex($justify: flex-start, $align: center);
+
+      strong {
+        white-space: nowrap;
+        padding-left: 4px;
+      }
     }
   }
 

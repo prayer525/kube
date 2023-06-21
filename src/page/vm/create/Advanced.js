@@ -4,24 +4,65 @@ import {ReactComponent as IconPathfindGray} from "../../../assets/images/icons/i
 import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ico-hexagon-gray.svg"
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
 import SelectBox from "../../../components/SelectBox";
+import CheckBoxMulti from "../../../components/CheckBoxMulti";
 
 const Advanced = () => {
-  const bootData = [
+  const keyPairData = [
     {
-      id: 'boot1',
-      name: 'DSWEWE 1'
+      id: 'keypair1',
+      name: 'ZSEWR-WERW-SE02 1'
     },{
-      id: 'boot2',
-      name: 'DSWEWE 2'
+      id: 'keypair2',
+      name: 'ZSEWR-WERW-SE02 2'
     },{
-      id: 'boot3',
-      name: 'DSWEWE 3'
+      id: 'keypair3',
+      name: 'ZSEWR-WERW-SE02 3'
     },{
-      id: 'boot4',
-      name: 'DSWEWE 4'
+      id: 'keypair4',
+      name: 'ZSEWR-WERW-SE02 4'
     },{
-      id: 'boot5',
-      name: 'DSWEWE 5'
+      id: 'keypair5',
+      name: 'ZSEWR-WERW-SE02 5'
+    }
+  ]
+
+  const securityData = [
+    {
+      id: 'team1',
+      value: 'VBA-1Team 1',
+      groupName: 'VBA 1팀 그룹 1',
+      ip: '264.351.216.111',
+      policy: 'FTP/Telnet/http/ https'
+    },{
+      id: 'team2',
+      value: 'VBA-1Team 2',
+      groupName: 'VBA 1팀 그룹 2',
+      ip: '264.351.216.222',
+      policy: 'FTP/Telnet/http/ https'
+    },{
+      id: 'team3',
+      value: 'VBA-1Team 3',
+      groupName: 'VBA 1팀 그룹 3',
+      ip: '264.351.216.333',
+      policy: 'FTP/Telnet/http/ https'
+    },{
+      id: 'team4',
+      value: 'VBA-1Team 4',
+      groupName: 'VBA 1팀 그룹 4',
+      ip: '264.351.216.444',
+      policy: 'FTP/Telnet/http/ https'
+    },{
+      id: 'team5',
+      value: 'VBA-1Team 5',
+      groupName: 'VBA 1팀 그룹 5',
+      ip: '264.351.216.555',
+      policy: 'FTP/Telnet/http/ https'
+    },{
+      id: 'team6',
+      value: 'VBA-1Team 6',
+      groupName: 'VBA 1팀 그룹 6',
+      ip: '264.351.216.666',
+      policy: 'FTP/Telnet/http/ https'
     }
   ]
 
@@ -69,73 +110,27 @@ const Advanced = () => {
           {/* End : Tab */}
 
           <div className="modal-content">
-
-            {/* Start : 이름 */}
-            <div className="content-box">
-              <label htmlFor="" aria-required>이름</label>
-              <div className="input-byte">
-                <input type="text" placeholder="입력해 주세요." />
-                <span>0 / 50</span>
-              </div>
-              <p className="caution">
-                <IconInfo />문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
-              </p>
-            </div>
-            {/* End : 이름 */}
-
-            {/* Start : Image type */}
-            <div className="content-box">
-              <label htmlFor="">이미지 유형</label>
-
-              <div className="tab-type-round">
-                <ul>
-                  <li>
-                    <input type="radio" name="round-tab" id="round-tab-1" />
-                    <label htmlFor="round-tab-1">이미지</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="round-tab" id="round-tab-2" checked />
-                    <label htmlFor="round-tab-2">부트 볼륨</label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* End : Image type */}
-
-            {/* Start : Image choice */}
             <div className="d-flex flex-1 gap-24 align-start">
-              {/* Start : Image */}
+              {/* Start : Key pair */}
               <div className="content-box">
-                <label htmlFor="" aria-required>부트 볼륨</label>
+                <label htmlFor="" aria-required>키 페어</label>
 
                 {/* Start : Single line select-box */}
-                <SelectBox data={bootData} type="single" />
-                {/* End : Multi line select-box */}
+                <SelectBox data={keyPairData} type="single" />
+                {/* End : Single line select-box */}
               </div>
-              {/* End : Image */}
+              {/* End : Key pair */}
 
               {/* Start : Flavor */}
               <div className="content-box">
-                <label htmlFor="" aria-required>Flavor</label>
+                <label htmlFor="">보안그룹</label>
 
                 {/* Start : Multi line select-box */}
-                <div className="select-list-box">
-                  <div className="selected-item">
-                    <p>
-                      <strong>Flavro2_Base</strong>
-                      <span>CPU 1vCore / Memory 32GB / Disk 1</span>
-                    </p>
-                  </div>
-                </div>
+                <CheckBoxMulti data={securityData} />
                 {/* End : Multi line select-box */}
-
-                <p className="caution">
-                  <IconInfo />최소 리소스 선택 시 리소스 부족으로 인해 구성요소가 설치되지 않을 수 있습니다.
-                </p>
               </div>
               {/* End : Flavor */}
             </div>
-            {/* End : Image choice */}
 
             {/* Start : Description */}
             <div className="content-box">

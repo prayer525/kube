@@ -109,7 +109,7 @@ const CommonBoot = () => {
 
                 {/* Start : Single line select-box */}
                 <SelectBox data={bootData} type="single" />
-                {/* End : Multi line select-box */}
+                {/* End : Single line select-box */}
               </div>
               {/* End : Image */}
 
