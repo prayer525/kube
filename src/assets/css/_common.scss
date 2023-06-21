@@ -1,4 +1,9 @@
 @import "./_mixin";
+@import "./_animate";
+
+.w-100 {
+  width: 100% !important;
+}
 
 .p-12 {
   padding: 12px;
@@ -528,6 +533,89 @@ select {
 
     strong {
       font-weight: 400;
+    }
+  }
+
+  &.active {
+    border: 1px solid #55BC8A;
+    box-shadow: 0 4px 8px rgba(85, 188, 138, 0.2);;
+  }
+
+  & + .select-list {
+    top: calc(100% + 4px);
+    bottom: inherit;
+  }
+
+  &.top-down + .select-list {
+    top: inherit;
+    bottom: calc(100% + 4px);
+  }
+
+  &.active + .select-list {
+    visibility: visible;
+    animation: show-fade-up 0.5s;
+  }
+
+  &.top-down.active + .select-list {
+    visibility: visible;
+    animation: show-fade-down 0.5s;
+  }
+}
+
+.select-list {
+  @include radius($bg: #242E42, $shadow: 0px 4px 8px rgba(36, 46, 66, 0.16));
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 268px;
+  padding: 4px 0;
+  overflow: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  z-index: 20;
+
+  li {
+    @include flex($justify: flex-start, $gap: 12px);
+
+    padding: 11px 12px;
+    cursor: pointer;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    p {
+      user-select: none;
+    }
+
+    strong {
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    span {
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      color: #79879C;
+      font-size: 12px;
+    }
+
+    &:hover {
+      background: #36435C;
+    }
+
+    &.selected {
+      background: #36435C url('../images/icons/ico-check-green.svg') right 18px center no-repeat;
     }
   }
 }

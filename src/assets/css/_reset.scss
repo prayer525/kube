@@ -235,3 +235,30 @@ table {
     background: rgba(24, 29, 40, 0.2);
     width: 6px;
 }
+
+.scroll-gray * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(24, 29, 40, 0.2) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.scroll-gray::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-gray::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-gray::-webkit-scrollbar:horizontal{
+    height: 6px;
+}
+
+.scroll-gray::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: rgb(209, 210, 212);
+    width: 6px;
+}
+

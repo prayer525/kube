@@ -65,7 +65,7 @@ const Index = () => {
           <th>네트워크</th>
           <td>./page/vm/create/Network.js</td>
           <td>Popup</td>
-          <td style={{textAlign: 'center'}}><a href="/vm/detail/network" target="_blank">페이지 이동</a></td>
+          <td style={{textAlign: 'center'}}><a href="/vm/create/network" target="_blank">페이지 이동</a></td>
         </tr>
         </tbody>
       </table>

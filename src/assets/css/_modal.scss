@@ -166,7 +166,7 @@
 
   position: relative;
   border: 1px solid #EFF4F9;
-  padding: 8px 10px;
+  padding: 8px 44px;
   margin-bottom: 4px;
 
   button {
@@ -227,19 +227,19 @@
 
     display: block;
     border: 1px solid #D1D7DF;
-    width: 95px;
-    height: 102px;
+    width: 124px;
+    height: 76px;
     color: #36435C;
     font-size: 12px;
     text-align: center;
-    padding: 14px 0;
+    padding: 8px 0;
     cursor: pointer;
 
     span {
       @include flex($justify: center);
 
-      width: 50px;
-      height: 50px;
+      width: 36px;
+      height: 36px;
       margin: 0 auto 12px;
     }
   }

@@ -6,9 +6,68 @@ import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-
 import {ReactComponent as IconOSLinux} from "../../../assets/images/icons/ico-linux.svg"
 import {ReactComponent as IconOSWindows} from "../../../assets/images/icons/ico-windows.svg"
 import {ReactComponent as IconOSOther} from "../../../assets/images/icons/ico-server-other.svg"
-import {ReactComponent as IconUbuntu} from "../../../assets/images/icons/ico-ubuntu.svg"
+import SelectBox from "../../../components/SelectBox";
 
 const CommonImage = () => {
+  // Image type data
+  const imageData = [
+    {
+      id: 'ubuntu1',
+      icon: 'ubuntu 1',
+      name: 'Ubuntu 20.01',
+      desc: '64비트 (x86)'
+    },{
+      id: 'ubuntu2',
+      icon: 'ubuntu 2',
+      name: 'Ubuntu 20.02',
+      desc: '64비트 (x86)'
+    },{
+      id: 'ubuntu3',
+      icon: 'ubuntu 3',
+      name: 'Ubuntu 20.03',
+      desc: '64비트 (x86)'
+    },{
+      id: 'ubuntu4',
+      icon: 'ubuntu 4',
+      name: 'Ubuntu 20.04',
+      desc: '64비트 (x86)'
+    },{
+      id: 'ubuntu5',
+      icon: 'ubuntu 5',
+      name: 'Ubuntu 20.05',
+      desc: '64비트 (x86)'
+    },{
+      id: 'ubuntu6',
+      icon: 'ubuntu 6',
+      name: 'Ubuntu 20.06',
+      desc: '64비트 (x86)'
+    }
+  ]
+
+  const flavroData = [
+    {
+      id: 'flavro1',
+      name: 'Flavro2_Base 1',
+      desc: 'CPU 1vCore / Memory 32GB / Disk 1'
+    },{
+      id: 'flavro2',
+      name: 'Flavro2_Base 2',
+      desc: 'CPU 1vCore / Memory 32GB / Disk 2'
+    },{
+      id: 'flavro3',
+      name: 'Flavro2_Base 3',
+      desc: 'CPU 1vCore / Memory 32GB / Disk 3'
+    },{
+      id: 'flavro4',
+      name: 'Flavro2_Base 4',
+      desc: 'CPU 1vCore / Memory 32GB / Disk 4'
+    },{
+      id: 'flavro5',
+      name: 'Flavro2_Base 5',
+      desc: 'CPU 1vCore / Memory 32GB / Disk 5'
+    }
+  ]
+
   return (<>
     {/*
       If "modal-wrap" has class "scrollable" then "modal-body" will scroll.
@@ -87,57 +146,53 @@ const CommonImage = () => {
             {/* End : Image type */}
 
             {/* Start : Image choice */}
-            <div className="d-flex flex-1 gap-24 align-start">
+            <div className="d-flex align-start flex-0">
               {/* Start : Image */}
-              <div className="content-box">
+              <div className="content-box w-100">
                 <label htmlFor="" aria-required>이미지</label>
 
-                {/* Start : Image Select */}
-                <div className="swiper-os-item-wrap">
-                  <ul className="os-item-list">
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-1" />
-                      <label htmlFor="slide-item-1">
-                        <span><IconOSLinux /></span>
-                        Linux
-                      </label>
-                    </li>
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-2" />
-                      <label htmlFor="slide-item-2">
-                        <span><IconOSWindows /></span>
-                        Windows
-                      </label>
-                    </li>
-                    <li>
-                      <input type="radio" name="slide-item" id="slide-item-3" />
-                      <label htmlFor="slide-item-3">
-                        <span><IconOSOther /></span>
-                        Other
-                      </label>
-                    </li>
-                  </ul>
+                <div className="d-flex flex-1 gap-24 align-start">
+                  {/* Start : Image Select */}
+                  <div className="swiper-os-item-wrap">
+                    <ul className="os-item-list">
+                      <li>
+                        <input type="radio" name="slide-item" id="slide-item-1" />
+                        <label htmlFor="slide-item-1">
+                          <span><IconOSLinux /></span>
+                          Linux
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" name="slide-item" id="slide-item-2" />
+                        <label htmlFor="slide-item-2">
+                          <span><IconOSWindows /></span>
+                          Windows
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" name="slide-item" id="slide-item-3" />
+                        <label htmlFor="slide-item-3">
+                          <span><IconOSOther /></span>
+                          Other
+                        </label>
+                      </li>
+                    </ul>
 
-                  <button type="button" className="btn-prev" disabled><span>이전</span></button>
-                  <button type="button" className="btn-next"><span>다음</span></button>
-                </div>
-                {/* End : Image Select */}
+                    <button type="button" className="btn-prev" disabled><span>이전</span></button>
+                    <button type="button" className="btn-next"><span>다음</span></button>
+                  </div>
+                  {/* End : Image Select */}
 
-                {/* Start : Multi line select-box */}
-                <div className="select-list-box">
-                  <div className="selected-item">
-                    <i className="icon"><IconUbuntu /></i>
-                    <p>
-                      <strong>Ubuntu 20.04</strong>
-                      <span>64비트 (x86)</span>
+                  <div>
+                    {/* Start : Multi line select-box */}
+                    <SelectBox data={imageData} />
+                    {/* End : Multi line select-box */}
+
+                    <p className="caution">
+                      <IconInfo />가상 머신 생성을 위한 운영 체제 이미지를 선택해주세요
                     </p>
                   </div>
                 </div>
-                {/* End : Multi line select-box */}
-
-                <p className="caution">
-                  <IconInfo />가상 머신 생성을 위한 운영 체제 이미지를 선택해주세요
-                </p>
               </div>
               {/* End : Image */}
 
@@ -146,14 +201,7 @@ const CommonImage = () => {
                 <label htmlFor="" aria-required>Flavor</label>
 
                 {/* Start : Multi line select-box */}
-                <div className="select-list-box">
-                  <div className="selected-item">
-                    <p>
-                      <strong>Flavro2_Base</strong>
-                      <span>CPU 1vCore / Memory 32GB / Disk 1</span>
-                    </p>
-                  </div>
-                </div>
+                <SelectBox data={flavroData} direction="top-down" />
                 {/* End : Multi line select-box */}
 
                 <p className="caution">
