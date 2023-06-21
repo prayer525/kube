@@ -59,7 +59,7 @@
 
   &.flex-1 {
     > * {
-      flex: 1
+      flex: 1 1 0 !important;
     }
   }
 
@@ -552,13 +552,17 @@ select {
   }
 
   &.active + .select-list {
-    visibility: visible;
+    display: block;
     animation: show-fade-up 0.5s;
   }
 
   &.top-down.active + .select-list {
-    visibility: visible;
+    display: block;
     animation: show-fade-down 0.5s;
+  }
+
+  &.single + .select-list {
+
   }
 }
 
@@ -568,11 +572,11 @@ select {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 268px;
+  max-height: 268px;
   padding: 4px 0;
   overflow: hidden;
   overflow-y: auto;
-  visibility: hidden;
+  display: none;
   z-index: 20;
 
   li {
@@ -709,7 +713,6 @@ select {
   flex: 1;
   margin-right: 52px;
   overflow: hidden;
-  overflow-x: auto;
 
   &.nowrap {
     flex-wrap: nowrap

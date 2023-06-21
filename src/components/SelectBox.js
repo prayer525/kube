@@ -4,6 +4,7 @@ import {ReactComponent as IconUbuntu} from "../assets/images/icons/ico-ubuntu.sv
 
 const SelectBox = (props) => {
   const [direction, setDirection] = useState('')
+  const [type, setType] = useState('')
   const [showFlag, setShowFlag] = useState(false)
   const [itemList, setItemList] = useState([])
   const [selectedItem, setSelectedItem] = useState({})
@@ -24,6 +25,10 @@ const SelectBox = (props) => {
       setDirection(props.direction)
     }
 
+    if(props.type) {
+      setType(props.type)
+    }
+
     window.addEventListener('click', fnToggleFlag, false)
 
     return () => {
@@ -32,13 +37,15 @@ const SelectBox = (props) => {
   }, [props])
   return (
     <div className="select-list-box">
-      <div className={`selected-item ${showFlag ? 'active' :''} ${direction}`} onClick={() => setShowFlag(!showFlag)}>
+      <div className={`selected-item ${showFlag ? 'active' :''} ${direction} ${type}`} onClick={() => setShowFlag(!showFlag)}>
         {
           selectedItem.icon ? <i className="icon"><IconUbuntu /></i> : <></>
         }
         <p>
           <strong>{ selectedItem.name }</strong>
-          <span>{ selectedItem.desc }</span>
+          {
+            type === '' ? <span>{ selectedItem.desc }</span> : <></>
+          }
         </p>
       </div>
 
@@ -55,7 +62,9 @@ const SelectBox = (props) => {
               }
               <p>
                 <strong>{ item.name }</strong>
-                <span>{ item.desc }</span>
+                {
+                  type === '' ? <span>{ item.desc }</span> : <></>
+                }
               </p>
             </li>
           ))

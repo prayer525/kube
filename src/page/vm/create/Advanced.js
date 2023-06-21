@@ -5,7 +5,7 @@ import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ic
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
 import SelectBox from "../../../components/SelectBox";
 
-const CommonBoot = () => {
+const Advanced = () => {
   const bootData = [
     {
       id: 'boot1',
@@ -24,6 +24,7 @@ const CommonBoot = () => {
       name: 'DSWEWE 5'
     }
   ]
+
   return (<>
     {/*
       If "modal-wrap" has class "scrollable" then "modal-body" will scroll.
@@ -43,21 +44,21 @@ const CommonBoot = () => {
         <div className="modal-body">
           {/* Start : Tab */}
           <ul className="progress-card">
-            <li className="current">
+            <li className="done">
               <span className="icon"><IconFileGray /></span>
               <p>
                 <strong>기본 설정</strong>
                 <span>Current</span>
               </p>
             </li>
-            <li>
+            <li className="done">
               <span className="icon"><IconPathfindGray /></span>
               <p>
                 <strong>네트워크 설정</strong>
                 <span>To do</span>
               </p>
             </li>
-            <li>
+            <li className="current">
               <span className="icon"><IconHexagonGray /></span>
               <p>
                 <strong>세부 설정</strong>
@@ -164,4 +165,4 @@ const CommonBoot = () => {
   </>)
 }
 
-export default CommonBoot
+export default Advanced

@@ -197,7 +197,7 @@ const CommonImage = () => {
               {/* End : Image */}
 
               {/* Start : Flavor */}
-              <div className="content-box">
+              <div className="content-box" style={{width: 'calc(50% - 12px)'}}>
                 <label htmlFor="" aria-required>Flavor</label>
 
                 {/* Start : Multi line select-box */}

@@ -23,7 +23,7 @@ const Index = () => {
         </thead>
         <tbody>
         <tr>
-          <th rowspan={7}>가상머신</th>
+          <th rowspan={8}>가상머신</th>
           <th rowspan={4}>가상머신 상세</th>
           <th>상태</th>
           <td>./page/vm/detail/Status.js</td>
@@ -49,7 +49,7 @@ const Index = () => {
           <td style={{textAlign: 'center'}}><a href="/vm/detail/event" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
-          <th rowSpan={3}>가상머신 생성</th>
+          <th rowSpan={4}>가상머신 생성</th>
           <th>기본설정 - 이미지</th>
           <td>./page/vm/create/CommonImage.js</td>
           <td>Popup</td>
@@ -66,6 +66,12 @@ const Index = () => {
           <td>./page/vm/create/Network.js</td>
           <td>Popup</td>
           <td style={{textAlign: 'center'}}><a href="/vm/create/network" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>세부설정</th>
+          <td>./page/vm/create/Advanced.js</td>
+          <td>Popup</td>
+          <td style={{textAlign: 'center'}}><a href="/vm/create/advanced" target="_blank">페이지 이동</a></td>
         </tr>
         </tbody>
       </table>
