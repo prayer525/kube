@@ -199,7 +199,7 @@ ssh_pwauth: True`
             {/* End : Script */}
 
             {/* Start : User name */}
-            <div className="content-box">
+            <div className="content-box m-0">
               <label htmlFor="">유저네임</label>
               <div className="input-byte">
                 <input type="text" placeholder="입력해 주세요." />
