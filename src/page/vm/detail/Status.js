@@ -24,10 +24,10 @@ const Status = () => {
             <h2 className="h2-bullet-home">project02-44444444444444444</h2>
 
             <div className="btn-group">
-              <button type="button" className="btn btn-dark">정보편집</button>
+              <button type="button" className="btn btn-control">정보편집</button>
 
               <div className="select-wrap">
-                <button type="button" className="btn">More ▾</button>
+                <button type="button" className="btn btn-default">More ▾</button>
 
                 <ul className="list-select-option">
                   <li><i><IconServer /></i><span>VNC 접속</span></li>

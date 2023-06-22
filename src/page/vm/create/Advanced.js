@@ -5,8 +5,17 @@ import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ic
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
 import SelectBox from "../../../components/SelectBox";
 import CheckBoxMulti from "../../../components/CheckBoxMulti";
+import {useState} from "react";
 
 const Advanced = () => {
+  const sampleText = `#cloud-config
+password: centos
+chpasswd:  {expire: False}
+ssh_pwauth: True`
+
+  const [text, setText] = useState(sampleText)
+  const [selectRadio, setSelectRadio] = useState(1)
+
   const keyPairData = [
     {
       id: 'keypair1',
@@ -63,6 +72,25 @@ const Advanced = () => {
       groupName: 'VBA 1팀 그룹 6',
       ip: '264.351.216.666',
       policy: 'FTP/Telnet/http/ https'
+    }
+  ]
+
+  const nodeData = [
+    {
+      id: 'nodeData1',
+      name: '자동 스케줄링 1'
+    },{
+      id: 'nodeData2',
+      name: '스케줄링 2'
+    },{
+      id: 'nodeData3',
+      name: 'ZSEWR-WERW-SE02 3'
+    },{
+      id: 'nodeData4',
+      name: 'ZSEWR-WERW-SE02 4'
+    },{
+      id: 'nodeData5',
+      name: 'ZSEWR-WERW-SE02 5'
     }
   ]
 
@@ -132,9 +160,47 @@ const Advanced = () => {
               {/* End : Flavor */}
             </div>
 
-            {/* Start : Description */}
+            <div className="d-flex flex-1 gap-24 align-start">
+              {/* Start : Node */}
+              <div className="content-box">
+                <label htmlFor="">노드</label>
+
+                  {/* Start : Single line select-box */}
+                  <SelectBox data={nodeData} type="single" />
+                  {/* End : Single line select-box */}
+              </div>
+              {/* End : Nod */}
+              <div></div>
+            </div>
+
+            {/* Start : Script */}
             <div className="content-box">
-              <label htmlFor="">설명</label>
+              <label htmlFor="">스크립트</label>
+
+              <div className="script-box">
+                <ul className="select-radio">
+                  <li>
+                    <input type="radio" name="script-type" id="script-type-1" checked={selectRadio===1} onChange={() => setSelectRadio(1)} />
+                    <label htmlFor="script-type-1">Password</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="script-type" id="script-type-2" checked={selectRadio===2} onChange={() => setSelectRadio(2)} />
+                    <label htmlFor="script-type-2">Run command</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="script-type" id="script-type-3" checked={selectRadio===3} onChange={() => setSelectRadio(3)} />
+                    <label htmlFor="script-type-3">사용자 정의</label>
+                  </li>
+                </ul>
+
+                <textarea name="" id="" value={ text } onChange={(e) => setText(e.target.value)}></textarea>
+              </div>
+            </div>
+            {/* End : Script */}
+
+            {/* Start : User name */}
+            <div className="content-box">
+              <label htmlFor="">유저네임</label>
               <div className="input-byte">
                 <input type="text" placeholder="입력해 주세요." />
                 <span>0 / 50</span>
@@ -143,15 +209,16 @@ const Advanced = () => {
                 <IconInfo />문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
               </p>
             </div>
-            {/* End : Description */}
+            {/* End : User name */}
           </div>
         </div>
         {/* End : Modal Body */}
 
         {/* Start : Modal Footer */}
         <div className="modal-footer">
-          <button type="button" className="btn">취소</button>
-          <button type="button" className="btn btn-dark">다음</button>
+          <button type="button" className="btn btn-default">취소</button>
+          <button type="button" className="btn btn-default">이전</button>
+          <button type="button" className="btn btn-control">다음</button>
         </div>
         {/* End : Modal Footer */}
       </article>

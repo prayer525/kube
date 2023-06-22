@@ -230,8 +230,8 @@ const CommonImage = () => {
 
         {/* Start : Modal Footer */}
         <div className="modal-footer">
-          <button type="button" className="btn">취소</button>
-          <button type="button" className="btn btn-dark">다음</button>
+          <button type="button" className="btn btn-default">취소</button>
+          <button type="button" className="btn btn-control">다음</button>
         </div>
         {/* End : Modal Footer */}
       </article>
