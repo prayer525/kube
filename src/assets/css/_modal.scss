@@ -41,6 +41,10 @@
     box-shadow: 0 4px 8px rgba(72, 91, 127, 0.2);
     border-radius: 4px;
     z-index: 20;
+
+    &.sm {
+      width: 488px;
+    }
   }
 
   .modal-header {
@@ -267,5 +271,45 @@
     font-size: 12px;
     margin-top: 20px;
     resize: none;
+  }
+}
+
+.vm-create-summary {
+  @include flex($align: flex-start, $gap: 12px, $wrap: nowrap);
+
+  margin-top: 24px;
+
+  li {
+    @include radius($shadow: none);
+
+    border: 1px solid #CCD3DB;
+    padding: 11px 16px;
+  }
+
+  dt {
+    @include flex($justify: flex-start);
+
+    color: #242E42;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    span {
+      @include flex($justify: center);
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  dd {
+    @include radius($bg: #F9FBFD, $shadow: none);
+
+    padding: 12px;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }

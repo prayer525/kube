@@ -4,7 +4,7 @@ import {ReactComponent as IconPathfindGray} from "../../../assets/images/icons/i
 import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ico-hexagon-gray.svg"
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
 import SelectBox from "../../../components/SelectBox";
-import CheckBoxMulti from "../../../components/CheckBoxMulti";
+import CheckBoxSecurity from "../../../components/CheckBoxSecurity";
 import {useState} from "react";
 
 const Advanced = () => {
@@ -154,7 +154,7 @@ ssh_pwauth: True`
                 <label htmlFor="">보안그룹</label>
 
                 {/* Start : Multi line select-box */}
-                <CheckBoxMulti data={securityData} />
+                <CheckBoxSecurity data={securityData} />
                 {/* End : Multi line select-box */}
               </div>
               {/* End : Flavor */}

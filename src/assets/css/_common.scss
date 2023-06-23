@@ -102,6 +102,17 @@
   }
 }
 
+h1.h1-page-title {
+  @include flex($justify: flex-start, $gap: 12px);
+  @include radius();
+
+  color: #242E42;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 24px 20px 28px;
+  margin-bottom: 12px;
+}
+
 h2.h2-default {
   height: 42px;
   line-height: 20px;
@@ -109,6 +120,13 @@ h2.h2-default {
   font-size: 12px;
   font-weight: 700;
   padding: 12px 0;
+}
+
+h2.h2-title {
+  line-height: 24px;
+  color: #242E42;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 h2.h2-bullet-home {
@@ -314,6 +332,33 @@ p.caution {
       span {
         color: #242E42;
         font-size: 12px;
+      }
+    }
+  }
+
+  &.thin {
+    th, td {
+      font-weight: 400;
+      padding: 6px 0;
+    }
+
+    td {
+      p {
+        overflow: visible;
+        word-break: keep-all;
+
+        strong {
+          display: block;
+          color: #242E42;
+          font-weight: 700;
+        }
+
+        span {
+          display: block;
+          color: #242E42;
+          word-break: keep-all;
+          white-space: pre-wrap;
+        }
       }
     }
   }
@@ -635,6 +680,8 @@ select {
   & + .checkbox-list,
   & + .select-list {
     top: calc(100% + 4px);
+    left: 0;
+    right: inherit;
     bottom: inherit;
   }
 
@@ -642,6 +689,12 @@ select {
   &.top-down + .select-list {
     top: inherit;
     bottom: calc(100% + 4px);
+  }
+
+  &.right + .checkbox-list,
+  &.right + .select-list {
+    left: inherit;
+    right: 0;
   }
 
   &.active + .checkbox-list,
@@ -667,7 +720,6 @@ select {
   @include radius($bg: #242E42, $shadow: 0px 4px 8px rgba(36, 46, 66, 0.16));
 
   position: absolute;
-  left: 0;
   width: 100%;
   max-height: 268px;
   padding: 4px 0;
@@ -691,6 +743,7 @@ select {
     }
 
     p {
+      color: #79879C;
       user-select: none;
     }
 

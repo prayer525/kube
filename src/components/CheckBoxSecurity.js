@@ -1,10 +1,9 @@
-import {createRef, useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {ReactComponent as IconClose} from "../assets/images/icons/ico-close-small.svg"
 
-const CheckBoxMulti = (props) => {
+const CheckBoxSecurity = (props) => {
   const [direction, setDirection] = useState('')
-  const [type, setType] = useState('')
   const [showFlag, setShowFlag] = useState(false)
   const [itemList, setItemList] = useState([])
   const [selectedList, setSelectedList] = useState({})
@@ -50,10 +49,6 @@ const CheckBoxMulti = (props) => {
       setDirection(props.direction)
     }
 
-    if(props.type) {
-      setType(props.type)
-    }
-
     window.addEventListener('click', fnToggleFlag, false)
 
     return () => {
@@ -61,10 +56,6 @@ const CheckBoxMulti = (props) => {
     }
   }, [props])
 
-  useEffect(() => {
-
-    console.log('selectedList : ' , selectedList)
-  }, [selectedList])
   return (
     <div className="select-list-box">
       <div className={`selected-item single multi ${showFlag ? 'active' :''} ${direction}`} onClick={() => setShowFlag(!showFlag)}>
@@ -121,4 +112,4 @@ const CheckBoxMulti = (props) => {
   )
 }
 
-export default CheckBoxMulti
+export default CheckBoxSecurity

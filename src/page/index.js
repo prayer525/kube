@@ -23,7 +23,14 @@ const Index = () => {
         </thead>
         <tbody>
         <tr>
-          <th rowspan={8}>가상머신</th>
+          <th rowSpan={11}>가상머신</th>
+          <th>목록</th>
+          <th></th>
+          <td>./page/vm/List.js</td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="/vm/list" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
           <th rowspan={4}>가상머신 상세</th>
           <th>상태</th>
           <td>./page/vm/detail/Status.js</td>
@@ -73,7 +80,62 @@ const Index = () => {
           <td>Popup</td>
           <td style={{textAlign: 'center'}}><a href="/vm/create/advanced" target="_blank">페이지 이동</a></td>
         </tr>
+        <tr>
+          <th>생성 내역</th>
+          <th></th>
+          <td>./page/vm/create/Summary.js</td>
+          <td>Popup</td>
+          <td style={{textAlign: 'center'}}><a href="/vm/create/summary" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>Fip IP 연결</th>
+          <th></th>
+          <td>./page/vm/create/Fip.js</td>
+          <td>Popup</td>
+          <td style={{textAlign: 'center'}}><a href="/vm/create/fip" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={1}>네트워크</th>
+          <th></th>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={1}>보안그룹</th>
+          <th></th>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={1}>Flavor</th>
+          <th></th>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={1}>이미지</th>
+          <th></th>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={1}>키페어</th>
+          <th></th>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+        </tr>
         </tbody>
+
       </table>
     </div>
   )
