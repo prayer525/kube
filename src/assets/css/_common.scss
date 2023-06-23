@@ -724,6 +724,10 @@ select {
 .checkbox-list {
   li {
     padding: 6px 12px;
+
+    strong {
+      font-weight: 400;
+    }
   }
 }
 
