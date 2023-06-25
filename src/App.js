@@ -7,13 +7,17 @@ import VMDetailStatus from "./page/vm/detail/Status";
 import VMDetailComposition from "./page/vm/detail/Composition";
 import VMDetailMonitoring from "./page/vm/detail/Monitoring";
 import VMDetailEvent from "./page/vm/detail/Event";
-
 import VMCreateCommonImage from './page/vm/create/CommonImage';
 import VMCreateCommonBoot from './page/vm/create/CommonBoot';
 import VMCreateNetwork from './page/vm/create/Network';
 import VMAdvanced from "./page/vm/create/Advanced";
 import VMSummary from "./page/vm/create/Summary";
 import VMFip from "./page/vm/create/Fip";
+
+import NetworkList from "./page/network/List";
+import NetworkCreateCommon from "./page/network/create/Common";
+import NetworkCreateAdvanced from "./page/network/create/Advanced";
+
 
 function App() {
   return (
@@ -25,13 +29,16 @@ function App() {
         <Route path="/vm/detail/composition" element={<VMDetailComposition />} />
         <Route path="/vm/detail/monitoring" element={<VMDetailMonitoring />} />
         <Route path="/vm/detail/event" element={<VMDetailEvent />} />
-
         <Route path="/vm/create/common-image" element={<VMCreateCommonImage />} />
         <Route path="/vm/create/common-boot" element={<VMCreateCommonBoot />} />
         <Route path="/vm/create/network" element={<VMCreateNetwork />} />
         <Route path="/vm/create/advanced" element={<VMAdvanced />} />
         <Route path="/vm/create/summary" element={<VMSummary />} />
         <Route path="/vm/create/fip" element={<VMFip />} />
+
+        <Route path="/network/list" element={<NetworkList />} />
+        <Route path="/network/create/common" element={<NetworkCreateCommon />} />
+        <Route path="/network/create/advanced" element={<NetworkCreateAdvanced />} />
       </Route>
     </Routes>
   );

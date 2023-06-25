@@ -95,12 +95,25 @@ const Index = () => {
           <td style={{textAlign: 'center'}}><a href="/vm/create/fip" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
-          <th rowSpan={1}>네트워크</th>
+          <th rowSpan={3}>네트워크</th>
+          <th>목록</th>
           <th></th>
-          <th></th>
+          <td>./page/network/List.js</td>
           <td></td>
-          <td></td>
-          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+          <td style={{textAlign: 'center'}}><a href="/network/list" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th rowSpan={2}>네트워크 생성</th>
+          <th>기본 설정</th>
+          <td>./page/network/create/Common.js</td>
+          <td>Popup</td>
+          <td style={{textAlign: 'center'}}><a href="/network/create/common" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>세부 설정</th>
+          <td>./page/network/create/Advanced.js</td>
+          <td>Popup</td>
+          <td style={{textAlign: 'center'}}><a href="/network/create/advanced" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
           <th rowSpan={1}>보안그룹</th>

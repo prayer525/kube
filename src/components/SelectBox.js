@@ -36,7 +36,7 @@ const SelectBox = (props) => {
     }
   }, [props])
   return (
-    <div className="select-list-box">
+    <div className={`select-list-box ${props.className}`}>
       <div className={`selected-item ${showFlag ? 'active' :''} ${direction} ${type}`} onClick={() => setShowFlag(!showFlag)}>
         {
           selectedItem.icon ? <i className="icon"><IconUbuntu /></i> : <></>
