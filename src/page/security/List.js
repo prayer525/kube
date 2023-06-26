@@ -1,5 +1,6 @@
 import { ReactComponent as IconPageTitle } from '../../assets/images/icons/ico-page-title.svg';
 import { ReactComponent as IconSquare } from '../../assets/images/icons/ico-dbl-square.svg';
+import { ReactComponent as IconSortDown } from '../../assets/images/icons/ico-arrow-down.svg';
 
 import TableQuickMenu from "../../components/TableQuickMenu";
 import TableControl from "../../components/TableControl";
@@ -9,23 +10,19 @@ const NetworkList = () => {
   return (<>
     <div style={{background: '#eff4f9', padding: '20px', minHeight: '100vh'}}>
       <h1 className="h1-page-title">
-        <IconPageTitle />네트워크 관리
+        <IconPageTitle />보안 그룹 생성
       </h1>
 
       <TableSearch />
 
       <div className="tbl-wrap">
         <table className="tbl-list">
-          <caption>네트워크 목록</caption>
+          <caption>보안 그룹 목록</caption>
           <colgroup>
             <col style={{width: '40px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
-            <col style={{width: '190px'}}/>
+            <col style={{width: 'auto'}}/>
+            <col style={{width: 'auto'}}/>
+            <col style={{width: 'auto'}}/>
             <col style={{width: 'auto'}}/>
             <col style={{width: '40px'}}/>
           </colgroup>
@@ -38,13 +35,9 @@ const NetworkList = () => {
               </div>
             </th>
             <th><strong>이름</strong></th>
-            <th><strong>네트워크 유형</strong></th>
-            <th><strong>MTU</strong></th>
-            <th><strong>CIDR</strong></th>
-            <th><strong>GATEWAY IP</strong></th>
-            <th><strong>Segment ID</strong></th>
+            <th><strong>정책 개수</strong></th>
             <th><strong>등록자</strong></th>
-            <th><strong>등록자</strong></th>
+            <th><strong>등록일<button type="button"><IconSortDown /></button></strong></th>
             <th><strong></strong></th>
           </tr>
           </thead>
@@ -57,11 +50,7 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
             <td>
@@ -76,14 +65,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -93,14 +80,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -110,14 +95,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -127,14 +110,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -144,14 +125,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -161,14 +140,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -178,14 +155,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -195,14 +170,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           <tr>
             <td>
@@ -212,14 +185,12 @@ const NetworkList = () => {
               </div>
             </td>
             <td><p className="tall"><IconSquare /><span>KubeeseifwerseeKubeeseifwersee…</span></p></td>
-            <td><p>FLAT</p></td>
-            <td><p>1500</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>10.10.10.30</p></td>
-            <td><p>1000</p></td>
+            <td><p>2</p></td>
             <td><p>Admin</p></td>
             <td><p>2023-04-01 09:55</p></td>
-            <td><TableQuickMenu /></td>
+            <td>
+              <TableQuickMenu />
+            </td>
           </tr>
           </tbody>
         </table>

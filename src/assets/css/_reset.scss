@@ -262,3 +262,7 @@ table {
     width: 6px;
 }
 
+*:disabled {
+    cursor: no-drop !important;
+}
+

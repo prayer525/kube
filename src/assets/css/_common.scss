@@ -396,11 +396,21 @@ p.caution {
   }
 }
 
+
+.tbl-wrap {
+  position: relative;
+  background: #FFFFFF;
+  padding: 0 12px 12px 12px;
+  z-index: 20;
+}
+
 .fixed-head-wrap {
+  position: relative;
   max-height: 312px;
   overflow: hidden;
   overflow-y: auto;
   margin: 4px 0;
+  z-index: 20;
 }
 
 .tbl-list {
@@ -516,6 +526,17 @@ p.caution {
       }
     }
   }
+
+  &.low-pad {
+    tbody {
+      tr {
+        td {
+          padding: 10px 12px;
+        }
+      }
+    }
+
+  }
 }
 
 .tbl-control {
@@ -529,6 +550,68 @@ p.caution {
 
     color: #E3E9EF;
     font-size: 12px;
+
+    .view-count {
+      @include flex($justify: flex-start, $gap: 5px);
+
+      position: relative;
+      height: 20px;
+      line-height: 20px;
+      color: #36435C;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+
+      > span {
+        @include flex($gap: 4px);
+
+        &:after {
+          content: '';
+          background: transparent url('../images/icons/ico-arrow-down.svg') center no-repeat;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      ul {
+        @include radius($bg: #FFFFFF, $shadow: 0px 4px 16px 0px rgba(39, 50, 71, 0.28));
+
+        position: absolute;
+        display: none;
+        top: calc(100% + 4px);
+        left: 0;
+        z-index: 30;
+        width: 100%;
+        padding: 8px;
+
+        box-sizing: content-box;
+
+        li {
+          border-radius: 4px;
+          line-height: 20px;
+          color: #4A5974;
+          font-size: 12px;
+          text-align: center;
+          padding: 8px 0;
+
+          &:hover {
+            background: #E3E9EF;
+          }
+        }
+
+        &.top-down {
+          top: inherit;
+          bottom: calc(100% + 4px);
+        }
+      }
+
+      &.active {
+        ul {
+          display: block;
+          animation: show-fade-down 0.5s;
+        }
+      }
+    }
   }
 
   .navigation {
@@ -539,68 +622,6 @@ p.caution {
       color: #242E42;
       font-size: 12px;
       text-align: center;
-    }
-  }
-}
-
-.select-default {
-  @include flex($justify: flex-start, $gap: 5px);
-
-  position: relative;
-  height: 20px;
-  line-height: 20px;
-  color: #36435C;
-  font-weight: 700;
-  cursor: pointer;
-  user-select: none;
-
-  > span {
-    @include flex($gap: 4px);
-
-    &:after {
-      content: '';
-      background: transparent url('../images/icons/ico-arrow-down.svg') center no-repeat;
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  ul {
-    @include radius($bg: #FFFFFF, $shadow: 0px 4px 16px 0px rgba(39, 50, 71, 0.28));
-
-    position: absolute;
-    display: none;
-    top: calc(100% + 4px);
-    left: 0;
-    z-index: 30;
-    width: 100%;
-    padding: 8px;
-
-    box-sizing: content-box;
-
-    li {
-      border-radius: 4px;
-      line-height: 20px;
-      color: #4A5974;
-      font-size: 12px;
-      text-align: center;
-      padding: 8px 0;
-
-      &:hover {
-        background: #E3E9EF;
-      }
-    }
-
-    &.top-down {
-      top: inherit;
-      bottom: calc(100% + 4px);
-    }
-  }
-
-  &.active {
-    ul {
-      display: block;
-      animation: show-fade-down 0.5s;
     }
   }
 }
@@ -748,6 +769,7 @@ p.caution {
     }
     &:disabled {
       background-color: #eff4f9;
+      color: #79879C;
       cursor: initial;
     }
   }
@@ -1057,6 +1079,10 @@ select {
       @include flex($justify: flex-start, $gap: 0 4px);
     }
   }
+
+  &.h-32 {
+    height: 32px;
+  }
 }
 
 .form-radio {
@@ -1095,7 +1121,80 @@ select {
       background: transparent url('../images/icons/ico-radio-on.svg') center no-repeat;
     }
   }
+}
 
+.form-select {
+  position: relative;
+  width: 100%;
+  height: 32px;
+
+  .selected-item {
+    border: 1px solid #ABB4BE;
+    border-radius: 4px;
+    background: #FFFFFF url('../images/icons/ico-arrow-down.svg') right 14px center no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 6px 24px 6px 12px;
+
+    p {
+      @include ellipsis();
+    }
+
+    &.active + .item-list {
+      display: block;
+      animation: show-fade-up 0.5s;
+    }
+
+    &.disabled {
+      background-color: #EFF4F9;
+      cursor: no-drop;
+    }
+  }
+
+  .item-list {
+    @include radius($bg: #FFFFFF, $shadow: 0px 4px 16px 0px rgba(39, 50, 71, 0.28));
+
+    position: absolute;
+    display: none;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 30;
+    min-width: 100%;
+    padding: 8px;
+
+    li {
+      position: relative;
+      border-radius: 4px;
+      line-height: 20px;
+      color: #4A5974;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 0;
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+
+
+      label {
+        display: block;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background: #E3E9EF;
+      }
+    }
+
+    &.top-down {
+      top: inherit;
+      bottom: calc(100% + 4px);
+    }
+  }
 }
 
 // Badge Item List
@@ -1181,6 +1280,7 @@ select {
 // Search area
 .search-area {
   position: relative;
+  z-index: 30;
 
   fieldset {
     @include flex($gap: 12px);

@@ -9,7 +9,7 @@ const TableControl = () => {
   return (
     <div className="tbl-control">
       <div className="page">
-        <div className={`select-default ${selectFlag ? 'active' : ''}`} onClick={() => setSelectFlag(!selectFlag)}>
+        <div className={`view-count ${selectFlag ? 'active' : ''}`} onClick={() => setSelectFlag(!selectFlag)}>
           Show: <span>10</span>
 
           <ul className="top-down">

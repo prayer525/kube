@@ -1,12 +1,8 @@
 import {ReactComponent as BtnClose} from "../../../assets/images/icons/ico-close-square.svg"
 import {ReactComponent as IconFileGray} from "../../../assets/images/icons/ico-file-gray.svg"
-import {ReactComponent as IconPathfindGray} from "../../../assets/images/icons/ico-pathfind-gray.svg"
 import {ReactComponent as IconHexagonGray} from "../../../assets/images/icons/ico-hexagon-gray.svg"
 import {ReactComponent as IconInfo} from "../../../assets/images/icons/ico-info-circle-small.svg"
-import {ReactComponent as IconOSLinux} from "../../../assets/images/icons/ico-linux.svg"
-import {ReactComponent as IconOSWindows} from "../../../assets/images/icons/ico-windows.svg"
-import {ReactComponent as IconOSOther} from "../../../assets/images/icons/ico-server-other.svg"
-import SelectBox from "../../../components/SelectBox";
+import SelectBox from "../../../components/SelectBox"
 
 const Common = () => {
   const networkData = [

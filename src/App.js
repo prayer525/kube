@@ -19,6 +19,9 @@ import NetworkDetail from "./page/network/Detail";
 import NetworkCreateCommon from "./page/network/create/Common";
 import NetworkCreateAdvanced from "./page/network/create/Advanced";
 
+import SecurityList from "./page/security/List";
+import SecurityCreateCommon from "./page/security/create/Common";
+
 
 function App() {
   return (
@@ -41,6 +44,11 @@ function App() {
         <Route path="/network/detail" element={<NetworkDetail />} />
         <Route path="/network/create/common" element={<NetworkCreateCommon />} />
         <Route path="/network/create/advanced" element={<NetworkCreateAdvanced />} />
+
+        <Route path="/security/list" element={<SecurityList />} />
+        <Route path="/security/create/common" element={<SecurityCreateCommon />} />
+
+
       </Route>
     </Routes>
   );

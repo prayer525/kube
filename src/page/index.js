@@ -123,10 +123,24 @@ const Index = () => {
           <td style={{textAlign: 'center'}}><a href="/network/detail" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
-          <th rowSpan={1}>보안그룹</th>
+          <th rowSpan={3}>보안그룹</th>
+          <th>목록</th>
           <th></th>
-          <th></th>
+          <td>./page/security/List.js</td>
           <td></td>
+          <td style={{textAlign: 'center'}}><a href="/security/list" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>등록</th>
+          <th>기본정보</th>
+          <td>./page/security/create/Common.js</td>
+          <td>팝업</td>
+          <td style={{textAlign: 'center'}}><a href="/security/create/common" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>상세</th>
+          <th></th>
+          <td>./page/security</td>
           <td></td>
           <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
         </tr>
