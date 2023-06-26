@@ -1,6 +1,6 @@
-import { ReactComponent as ImgComposition } from '../../../assets/images/dummy/img-composition.svg';
+import { ReactComponent as ImgComposition } from '../../assets/images/dummy/img-composition.svg';
 
-const Composition = () => {
+const NetworkDetail = () => {
   return (<>
     <div style={{background: '#eff4f9', padding: '20px', minHeight: '100vh'}}>
       <div className="vm-detail-wrap">
@@ -17,7 +17,7 @@ const Composition = () => {
               <button type="button" className="btn btn-control">정보편집</button>
 
               <div className="select-wrap">
-
+                <button type="button" className="btn btn-default">More ▾</button>
               </div>
             </div>
           </div>
@@ -35,48 +35,57 @@ const Composition = () => {
               </colgroup>
               <tbody>
               <tr>
-                <th>이미지</th>
-                <td><p>Linux 2023 AMI 2023</p></td>
-              </tr>
-              <tr>
                 <th>클러스터</th>
-                <td><p>클러스터</p></td>
+                <td><p>클러스터_01</p></td>
               </tr>
               <tr>
-                <th>이미지</th>
-                <td><p>Ubuntu 20.04</p></td>
+                <th>네트워크 유형</th>
+                <td><p>VLAN</p></td>
               </tr>
               <tr>
-                <th>Flavor</th>
-                <td><p>Flavro2_Base * 1</p></td>
+                <th>Segment ID</th>
+                <td><p>1000</p></td>
               </tr>
               <tr>
-                <th>네트워크</th>
+                <th>MTU</th>
+                <td><p>1,500</p></td>
+              </tr>
+              <tr>
+                <th>CIDR</th>
+                <td><p>210.192.255.04</p></td>
+              </tr>
+              <tr>
+                <th>Gateway IP</th>
+                <td><p>210.192.255.04</p></td>
+              </tr>
+              <tr>
+                <th>Default Route</th>
+                <td><p>사용</p></td>
+              </tr>
+              <tr>
+                <th>External</th>
+                <td><p>사용</p></td>
+              </tr>
+              <tr>
+                <th>IP Pool 정보</th>
                 <td>
-                  <p>INT 64 FLAT/라우터</p>
-                  <div className="d-flex"><strong>기본 경로</strong><span>10.10.10.0</span></div>
-                  <div className="d-flex"><strong>Gateway IP</strong><span>192.168.62.0/24</span></div>
+                  <p>시작 IP : 10.10. 0. 24</p>
+                  <p>끝 IP : 10.10. 0. 24</p>
                 </td>
               </tr>
               <tr>
-                <th>SR-IOV 네트워크</th>
+                <th>DNS</th>
                 <td>
-                  <p>KubevirtwobevirtwbevirtwbevirtwbevirtKubevirtwobevirtwbevirtwbevirtwbevirt…</p>
-                  <div className="d-flex"><strong>기본 경로</strong><span>10.10.10.0</span></div>
-                  <div className="d-flex"><strong>Gateway IP</strong><span>192.168.62.0/24</span></div>
+                  <p>Destination : 10.10.10.0</p>
+                  <p>Nelete : 10.10.10.1</p>
                 </td>
               </tr>
               <tr>
-                <th>키 페어</th>
-                <td><p>ZSEWR-WERW-SE02</p></td>
-              </tr>
-              <tr>
-                <th>Load Balancer</th>
-                <td><p>234342</p></td>
-              </tr>
-              <tr>
-                <th>보안그룹</th>
-                <td><p>VBA-1Team</p></td>
+                <th>Host Routes</th>
+                <td>
+                  <p>Destination : 10.10.10.0</p>
+                  <p>Nelete : 10.10.10.1</p>
+                </td>
               </tr>
               <tr>
                 <th>설명</th>
@@ -93,10 +102,7 @@ const Composition = () => {
         <section>
           {/* Start : TAb Button */}
           <ul className="tab-type-basic">
-            <li><input type="radio" name="tab" id="tab1" /><label htmlFor="tab1">상태</label></li>
-            <li><input type="radio" name="tab" id="tab2" checked="true" /><label htmlFor="tab2">구성정보</label></li>
-            <li><input type="radio" name="tab" id="tab3" /><label htmlFor="tab3">모니터링</label></li>
-            <li><input type="radio" name="tab" id="tab4" /><label htmlFor="tab4">이벤트</label></li>
+            <li><input type="radio" name="tab" id="tab1" checked="true" /><label htmlFor="tab1">상태</label></li>
           </ul>
           {/* End : TAb Button */}
 
@@ -116,4 +122,4 @@ const Composition = () => {
   </>)
 }
 
-export default Composition
+export default NetworkDetail

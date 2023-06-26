@@ -95,7 +95,7 @@ const Index = () => {
           <td style={{textAlign: 'center'}}><a href="/vm/create/fip" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
-          <th rowSpan={3}>네트워크</th>
+          <th rowSpan={4}>네트워크</th>
           <th>목록</th>
           <th></th>
           <td>./page/network/List.js</td>
@@ -114,6 +114,13 @@ const Index = () => {
           <td>./page/network/create/Advanced.js</td>
           <td>Popup</td>
           <td style={{textAlign: 'center'}}><a href="/network/create/advanced" target="_blank">페이지 이동</a></td>
+        </tr>
+        <tr>
+          <th>상세</th>
+          <th></th>
+          <td>./page/network/Detail.js</td>
+          <td></td>
+          <td style={{textAlign: 'center'}}><a href="/network/detail" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
           <th rowSpan={1}>보안그룹</th>

@@ -1,14 +1,11 @@
 import { ReactComponent as IconPageTitle } from '../../assets/images/icons/ico-page-title.svg';
 import { ReactComponent as IconSquare } from '../../assets/images/icons/ico-dbl-square.svg';
-import { ReactComponent as IconUbuntu } from '../../assets/images/icons/ico-ubuntu.svg';
-import { ReactComponent as IconDown } from '../../assets/images/icons/ico-arrow-clamp-down.svg';
-import { ReactComponent as IconUp } from '../../assets/images/icons/ico-arrow-clamp-up.svg';
 
 import TableQuickMenu from "../../components/TableQuickMenu";
 import TableControl from "../../components/TableControl";
 import TableSearch from "../../components/TableSearch";
 
-const List = () => {
+const NetworkList = () => {
   return (<>
     <div style={{background: '#eff4f9', padding: '20px', minHeight: '100vh'}}>
       <h1 className="h1-page-title">
@@ -233,4 +230,4 @@ const List = () => {
   </>)
 }
 
-export default List
+export default NetworkList

@@ -12,7 +12,7 @@ const Event = () => {
             <h2 className="h2-bullet-home">project02-44444444444444444</h2>
 
             <div className="btn-group">
-              <button type="button" className="btn">정보편집</button>
+              <button type="button" className="btn btn-control">정보편집</button>
 
               <div className="select-wrap">
 

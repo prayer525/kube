@@ -15,6 +15,7 @@ import VMSummary from "./page/vm/create/Summary";
 import VMFip from "./page/vm/create/Fip";
 
 import NetworkList from "./page/network/List";
+import NetworkDetail from "./page/network/Detail";
 import NetworkCreateCommon from "./page/network/create/Common";
 import NetworkCreateAdvanced from "./page/network/create/Advanced";
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/vm/create/fip" element={<VMFip />} />
 
         <Route path="/network/list" element={<NetworkList />} />
+        <Route path="/network/detail" element={<NetworkDetail />} />
         <Route path="/network/create/common" element={<NetworkCreateCommon />} />
         <Route path="/network/create/advanced" element={<NetworkCreateAdvanced />} />
       </Route>

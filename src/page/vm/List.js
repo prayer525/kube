@@ -3,6 +3,7 @@ import { ReactComponent as IconSquare } from '../../assets/images/icons/ico-dbl-
 import { ReactComponent as IconUbuntu } from '../../assets/images/icons/ico-ubuntu.svg';
 import { ReactComponent as IconDown } from '../../assets/images/icons/ico-arrow-clamp-down.svg';
 import { ReactComponent as IconUp } from '../../assets/images/icons/ico-arrow-clamp-up.svg';
+import { ReactComponent as IconSortDown } from '../../assets/images/icons/ico-arrow-down.svg';
 
 import TableQuickMenu from "../../components/TableQuickMenu";
 import TableControl from "../../components/TableControl";
@@ -42,7 +43,7 @@ const List = () => {
                 <label htmlFor="chk-2-1"></label>
               </div>
             </th>
-            <th><strong>이름</strong></th>
+            <th><strong>이름<button type="button"><IconSortDown /></button></strong></th>
             <th><strong>이미지</strong></th>
             <th><strong>Flavor</strong></th>
             <th><strong>네트워크</strong></th>
@@ -50,7 +51,7 @@ const List = () => {
             <th><strong>노드</strong></th>
             <th><strong>보안 그룹</strong></th>
             <th><strong>상태</strong></th>
-            <th><strong>등록일</strong></th>
+            <th><strong>등록일<button type="button"><IconSortDown /></button></strong></th>
             <th><strong>등록자</strong></th>
             <th><strong></strong></th>
           </tr>

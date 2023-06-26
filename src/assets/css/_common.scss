@@ -29,6 +29,10 @@
   margin-bottom: 12px;
 }
 
+.my-24 {
+  margin: 24px 0;
+}
+
 .m-auto {
   display: block;
   margin: 0 auto;
@@ -36,6 +40,10 @@
 
 .text-white {
   color: #FFFFFF;
+}
+
+.text-gray {
+  color: #79879C !important;
 }
 
 .none-shadow {
@@ -55,6 +63,14 @@
 
   &.gap-24 {
     gap: 24px;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
   }
 
   &.align-start {
@@ -89,6 +105,12 @@
 
   &.box-line {
     border: 1px solid #EFF4F9;
+  }
+
+  &.content-wrap {
+    border: 1px solid #CCD3DB;
+    box-shadow: none;
+    padding: 11px 16px;
   }
 }
 
@@ -309,7 +331,7 @@ p.caution {
     font-size: 12px;
     text-align: left;
     vertical-align: top;
-    padding: 16px 0;
+    padding: 11px 0;
   }
 
   th {
@@ -399,7 +421,8 @@ p.caution {
       border-bottom: 1px solid #EFF4F9;
 
       strong {
-        display: block;
+        @include flex($justify: flex-start, $gap: 4px);
+
         height: 20px;
         line-height: 20px;
         color: #79879C;
@@ -688,6 +711,10 @@ p.caution {
     position: relative;
     width: 100%;
 
+    input {
+      padding: 0 50px 0 12px;
+    }
+
     span {
       position: absolute;
       top: 50%;
@@ -706,7 +733,7 @@ p.caution {
     height: 32px;
     color: #36435C;
     font-size: 12px;
-    padding: 0 50px 0 12px;
+    padding: 0 12px;
 
     &::placeholder {
       color: #79879C;
@@ -1030,6 +1057,45 @@ select {
       @include flex($justify: flex-start, $gap: 0 4px);
     }
   }
+}
+
+.form-radio {
+  position: relative;
+
+  padding: 6px 0;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  label {
+    @include flex($justify: flex-start, $gap: 8px);
+
+    line-height: 20px;
+    color: #404E68;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      background: transparent url('../images/icons/ico-radio-off.svg') center no-repeat;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  input:checked + label {
+    &:before {
+      background: transparent url('../images/icons/ico-radio-on.svg') center no-repeat;
+    }
+  }
+
 }
 
 // Badge Item List
