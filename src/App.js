@@ -21,6 +21,7 @@ import NetworkCreateAdvanced from "./page/network/create/Advanced";
 
 import SecurityList from "./page/security/List";
 import SecurityCreateCommon from "./page/security/create/Common";
+import SecurityDetail from "./page/security/Detail";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
 
         <Route path="/security/list" element={<SecurityList />} />
         <Route path="/security/create/common" element={<SecurityCreateCommon />} />
+        <Route path="/security/detail" element={<SecurityDetail />} />
 
 
       </Route>

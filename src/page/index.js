@@ -140,9 +140,9 @@ const Index = () => {
         <tr>
           <th>상세</th>
           <th></th>
-          <td>./page/security</td>
+          <td>./page/security/Detail.js</td>
           <td></td>
-          <td style={{textAlign: 'center'}}><a href="#" target="_blank">페이지 이동</a></td>
+          <td style={{textAlign: 'center'}}><a href="/security/detail" target="_blank">페이지 이동</a></td>
         </tr>
         <tr>
           <th rowSpan={1}>Flavor</th>
