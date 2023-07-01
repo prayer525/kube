@@ -164,11 +164,12 @@ caption {
 }
 
 button {
-    cursor: pointer;
+    cursor: pointer
+}
 
-    svg {
-        display: block;
-    }
+button svg,
+button img {
+    display: block
 }
 
 body {
@@ -184,22 +185,6 @@ li {
 blockquote,
 q {
     quotes: none;
-}
-
-blockquote {
-    &:before,
-    &:after {
-        content: '';
-        content: none;
-    }
-}
-
-q {
-    &:before,
-    &:after {
-        content: '';
-        content: none;
-    }
 }
 
 table {
