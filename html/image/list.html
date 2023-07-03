@@ -41,7 +41,7 @@
       <button type="button"><img src="../../images/icons/ico-refresh.svg" alt="refresh"></button>
       <button type="button"><img src="../../images/icons/ico-gear.svg" alt="setting"></button>
 
-      <button type="button" class="btn btn-control">생성</button>
+      <button type="button" class="btn btn-control btn-show-modal">생성</button>
     </fieldset>
 
     <div class="checkbox-control">
@@ -49,7 +49,7 @@
       <button type="button" class="btn text-white">선택해제</button>
     </div>
   </div>
-  
+
   <div class="tbl-wrap">
     <table class="tbl-list">
       <caption>네트워크 목록</caption>
@@ -372,23 +372,322 @@
   <div class="tbl-control">
     <div class="page">
       <div class=view-count>
-      Show: <span>10</span>
+        Show: <span>10</span>
 
-      <ul class="top-down">
-        <li>10</li>
-        <li>20</li>
-        <li>30</li>
-      </ul>
+        <ul class="top-down">
+          <li>10</li>
+          <li>20</li>
+          <li>30</li>
+        </ul>
+      </div>
+      |
+      <p>Total: 2</p>
     </div>
-    |
-    <p>Total: 2</p>
-  </div>
-  <div class="navigation">
-    <button type="button"><img src="../../images/icons/ico-arrow-long-left.svg" alt="prev"></button>
-    <span>1/1</span>
-    <button type="button"><img src="../../images/icons/ico-arrow-long-right.svg" alt="next"></button>
+    <div class="navigation">
+      <button type="button"><img src="../../images/icons/ico-arrow-long-left.svg" alt="prev"></button>
+      <span>1/1</span>
+      <button type="button"><img src="../../images/icons/ico-arrow-long-right.svg" alt="next"></button>
+    </div>
   </div>
 </div>
+
+<section class="modal-wrap">
+  <!-- Start : Modal -->
+  <article class="modal scrollable">
+    <!-- Start : Modal Header -->
+    <div class="modal-header">
+      <h2 class="modal-title">이미지 생성</h2>
+      <button type="button" class="btn-modal-close"><img src="../../images/icons/ico-close-square.svg" alt="close"></button>
+    </div>
+    <!-- End : Modal Header -->
+
+    <!-- Start : Modal Body -->
+    <div class="modal-body">
+      <div class="modal-content">
+
+        <!-- Start : 이름 -->
+        <div class="content-box">
+          <label aria-required>이름</label>
+          <div class="input-byte">
+            <input type="text" placeholder="입력해 주세요." />
+            <span>0 / 50</span>
+          </div>
+          <p class="caution">
+            <IconInfo />문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
+          </p>
+        </div>
+        <!-- End : 이름 -->
+
+        <!-- Start : Image -->
+        <div class="content-box w-100">
+          <label aria-required>이미지</label>
+          <div class="d-flex flex-1 gap-24 align-start">
+            <!-- Start : Image Select -->
+            <div class="swiper-os-item-wrap">
+              <ul class="os-item-list">
+                <li>
+                  <input type="radio" name="slide-item" id="slide-item-1" checked />
+                  <label for="slide-item-1">
+                    <span><img src="../../images/icons/ico-linux.svg" alt=""></span>
+                    Linux
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="slide-item" id="slide-item-2" />
+                  <label for="slide-item-2">
+                    <span><img src="../../images/icons/ico-windows.svg" alt=""></span>
+                    Windows
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="slide-item" id="slide-item-3" />
+                  <label for="slide-item-3">
+                    <span><img src="../../images/icons/ico-server-other.svg" alt=""></span>
+                    Other
+                  </label>
+                </li>
+              </ul>
+
+              <button type="button" class="btn-prev" disabled><span>이전</span></button>
+              <button type="button" class="btn-next"><span>다음</span></button>
+            </div>
+            <!-- End : Image Select -->
+
+            <!-- Start : Multi line select-box -->
+            <div class="select-list-box">
+              <div class="selected-item" style="height: 94px">
+                <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                <p>
+                  <strong>Ubuntu 20.01</strong>
+                  <span>64비트 (x86)</span>
+                </p>
+              </div>
+
+              <ul class="select-list scroll-gray">
+                <li class="selected">
+                  <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                  <p>
+                    <strong>Ubuntu 20.01</strong>
+                    <span>64비트 (x86)</span>
+                  </p>
+                </li>
+                <li>
+                  <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                  <p>
+                    <strong>Ubuntu 20.02</strong>
+                    <span>64비트 (x86)</span>
+                  </p>
+                </li>
+                <li>
+                  <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                  <p>
+                    <strong>Ubuntu 20.03</strong>
+                    <span>64비트 (x86)</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!-- End : Multi line select-box -->
+          </div>
+        </div>
+        <!-- End : Image -->
+
+        <div class="d-flex flex-1 gap-24 align-start w-100">
+
+          <!-- Start : CPU 타입 -->
+          <div class="content-box">
+            <label>CPU 타입</label>
+
+            <div class="select-list-box">
+              <div class="selected-item single">
+                <p>
+                  <strong></strong>
+                </p>
+              </div>
+
+              <ul class="select-list scroll-gray">
+                <li class="selected">
+                  <p>
+                    <strong>CPU Type 1</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>CPU Type 2</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>CPU Type 3</strong>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End : CPU 타입 -->
+
+          <!-- Start : 부트 타입 -->
+          <div class="content-box">
+            <label>부트 타입</label>
+
+            <!-- Start : Multi line select-box -->
+            <div class="select-list-box">
+              <div class="selected-item single">
+                <p>
+                  <strong></strong>
+                </p>
+              </div>
+
+              <ul class="select-list scroll-gray">
+                <li class="selected">
+                  <p>
+                    <strong>부트 타입 1</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>부트 타입 2</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>부트 타입 3</strong>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End : 부트 타입 -->
+        </div>
+
+        <div class="d-flex flex-1 gap-24 align-start w-100">
+          <!-- Start : 리얼 타임 -->
+          <div class="content-box">
+            <label>리얼 타임</label>
+
+            <!-- Start : Multi line select-box -->
+            <div class="d-flex justify-start gap-24">
+              <div class="form-radio">
+                <input type="radio" name="rdo-use-yn" value="Y" id="rdo-use-y" checked />
+                <label for="rdo-use-y">사용</label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" name="rdo-use-yn" value="N" id="rdo-use-n" />
+                <label for="rdo-use-n">미사용</label>
+              </div>
+            </div>
+          </div>
+          <!-- End : 리얼 타임 -->
+
+          <!-- Start : 버전 -->
+          <div class="content-box">
+            <label>버전</label>
+
+            <!-- Start : Multi line select-box -->
+            <div class="select-list-box">
+              <div class="selected-item single">
+                <p>
+                  <strong></strong>
+                </p>
+              </div>
+
+              <ul class="select-list scroll-gray">
+                <li class="selected">
+                  <p>
+                    <strong>버전 1</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>버전 2</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>버전 3</strong>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End : 버전 -->
+        </div>
+
+        <!-- Start : 공개여부 -->
+        <div class="content-box" style="width: calc(50% - 12px)">
+          <label>공개여부</label>
+
+          <div class="select-list-box">
+            <div class="selected-item single">
+              <p>
+                <strong>프라이빗</strong>
+              </p>
+            </div>
+
+            <ul class="select-list scroll-gray">
+              <li class="selected">
+                <p>
+                  <strong>프라이빗</strong>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>퍼블릭</strong>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End : 공개여부 -->
+
+        <div class="d-flex flex-1 gap-24 align-start w-100">
+          <div class="content-box">
+            <label>사용자 이름</label>
+
+            <input type="text" />
+          </div>
+
+          <div class="content-box">
+            <label>패스워드</label>
+
+            <input type="text" />
+          </div>
+        </div>
+
+        <div class="content-box">
+          <label>소스</label>
+
+          <div class="form-text icon">
+            <strong class="badge">Docker</strong>
+            <input type="text" value="docker://quay.io/edgestack/centos-7-container-disk:latest" />
+            <button type="button"><img src="../../images/icons/ico-cube.svg" alt="큐브"></button>
+          </div>
+        </div>
+
+        <!-- Start : Description -->
+        <div class="content-box">
+          <label>설명</label>
+          <div class="input-byte">
+            <input type="text" placeholder="입력해 주세요." />
+            <span>0 / 50</span>
+          </div>
+          <p class="caution">
+            <img src="../../images/icons/ico-info-circle-small.svg" alt="">문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
+          </p>
+        </div>
+        <!-- End : Description -->
+      </div>
+      <!-- End : Modal Body -->
+
+      <!-- Start : Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-control">다음</button>
+      </div>
+      <!-- End : Modal Footer -->
+    </div>
+  </article>
+  <!-- End : Modal -->
+</section>
 
 <script>
   // search select
@@ -439,6 +738,78 @@
       e.currentTarget.classList.add('active')
     }
   })
+
+  // checkbox control box
+  const checkboxList = document.querySelectorAll('.tbl-list tbody input[type=checkbox]')
+  const checkboxControl = document.querySelector('.checkbox-control')
+
+  checkboxList.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', () => {
+      let checkCount = 0
+
+      checkboxList.forEach((item, idx) => {
+        if(item.checked) {
+          checkCount++
+        }
+      })
+
+      if(checkCount > 0) {
+        checkboxControl.classList.add('active')
+      } else {
+        checkboxControl.classList.remove('active')
+      }
+    }, false)
+  })
+
+  // show modal
+  const btnShowModal = document.querySelector('.btn-show-modal')
+  const modal = document.querySelector('.modal-wrap')
+
+  btnShowModal.addEventListener('click', () => {
+    modal.classList.add('active')
+  }, false)
+
+  // hide modal
+  const btnHideModal = document.querySelector('.btn-modal-close')
+
+  btnHideModal.addEventListener('click', () => {
+    modal.classList.remove('active')
+  }, false)
+
+  // modal select box
+  const selectedItems = document.querySelectorAll('.select-list-box .selected-item')
+  const selectItemList = document.querySelectorAll('.select-list-box .select-list li')
+
+  selectedItems.forEach((item, index) => {
+    item.addEventListener('click', (e) => {
+      selectedItems.forEach((item, index) => {
+        item.classList.remove('active')
+      })
+
+      if(e.currentTarget.className.indexOf('active') > -1) {
+        e.currentTarget.classList.remove('active')
+      } else {
+        e.currentTarget.classList.add('active')
+      }
+    }, false)
+  })
+
+  selectItemList.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      selectedItems.forEach((item, index) => {
+        item.classList.remove('active')
+      })
+    }, false)
+  })
+
+  // remove all "active"
+  window.addEventListener('click', (e) =>{
+    if( !e.target.closest('.select-list-box') ) {
+      selectedItems.forEach((item, index) => {
+        item.classList.remove('active')
+      })
+    }
+  }, false)
 
   // remove all "active"
   window.addEventListener('click', (e) => {
