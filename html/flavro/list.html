@@ -2,35 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>이미지 목록</title>
+  <title>Flavro 목록</title>
   <link rel="stylesheet" href="../../css/common.css">
 </head>
 <body>
 <div class="content-wrapper">
   <h1 class="h1-page-title">
-    <img src="../../images/icons/ico-page-title.svg" alt="">이미지
+    <img src="../../images/icons/ico-page-title.svg" alt="">Flavro
   </h1>
 
   <div class="search-area">
     <fieldset>
       <legend>목록 검색</legend>
-
-      <div class="form-select">
-        <div class="selected-item">
-          <p>이름</p>
-        </div>
-
-        <ul class="item-list">
-          <li>
-            <input type="radio" value="name" name="search-type" id="search-type-1" />
-            <label for="search-type-1">이름</label>
-          </li>
-          <li>
-            <input type="radio" value="name" name="search-type" id="search-type-2" />
-            <label for="search-type-2">CPU 타입</label>
-          </li>
-        </ul>
-      </div>
 
       <div class="form-search">
         <span><img src="../../images/icons/ico-search-small.svg" alt=""></span>
@@ -45,13 +28,13 @@
 
         <ul class="list-select-option" style="width: 160px">
           <li class="title">Customize Column</li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>리소스 이름</span></li>
-          <li><i><img src="../../images/icons/ico-eye-close.svg" alt=""></i><span>타입</span></li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>네트워크</span></li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>노드</span></li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>보안 그룹</span></li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>클러스터</span></li>
-          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>상태</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>이름</span></li>
+          <li><i><img src="../../images/icons/ico-eye-close.svg" alt=""></i><span>CPU</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>Ram (MB)</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>루트 디스크 (GB)</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>임시 디스크 (GB)</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>GPU (개수)</span></li>
+          <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>등록자</span></li>
           <li><i><img src="../../images/icons/ico-eye-open.svg" alt=""></i><span>등록일</span></li>
         </ul>
       </div>
@@ -88,14 +71,14 @@
             <label for="chk-1-1"></label>
           </div>
         </th>
-        <th><strong>이름<button type="button"><img src="../../images/icons/ico-arrow-down.svg" alt="sort"></button></strong></th>
-        <th><strong>CPU 타입</strong></th>
-        <th><strong>부트 타입</strong></th>
-        <th><strong>배포판</strong></th>
-        <th><strong>버전</strong></th>
-        <th><strong>리얼타임</strong></th>
+        <th><strong>이름</strong></th>
+        <th><strong>CPU</strong></th>
+        <th><strong>Ram (MB)</strong></th>
+        <th><strong>루트 디스크 (GB)</strong></th>
+        <th><strong>임시 디스크 (GB)</strong></th>
+        <th><strong>GPU (개수)</strong></th>
         <th><strong>등록자</strong></th>
-        <th><strong>등록일<button type="button"><img src="../../images/icons/ico-arrow-down.svg" alt="sort"></button></strong></th>
+        <th><strong>등록일</strong></th>
         <th><strong></strong></th>
       </tr>
       </thead>
@@ -107,12 +90,12 @@
             <label for="chk-1-2"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -135,12 +118,12 @@
             <label for="chk-1-3"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -163,12 +146,12 @@
             <label for="chk-1-4"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -191,12 +174,12 @@
             <label for="chk-1-5"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -219,12 +202,12 @@
             <label for="chk-1-6"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -247,12 +230,12 @@
             <label for="chk-1-7"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -275,12 +258,12 @@
             <label for="chk-1-8"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -303,12 +286,12 @@
             <label for="chk-1-9"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -331,12 +314,12 @@
             <label for="chk-1-10"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -359,12 +342,12 @@
             <label for="chk-1-11"></label>
           </div>
         </td>
-        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>Centos-test01…</span></p></td>
-        <td><p>x86_64</p></td>
-        <td><p>legacy</p></td>
-        <td><p class="tall"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></p></td>
-        <td><p>v1.0</p></td>
-        <td><p>사용</p></td>
+        <td><p class="tall"><img src="../../images/icons/ico-dbl-square.svg" alt=""><span>M1대형</span></p></td>
+        <td><p>sedse</p></td>
+        <td><p>8192</p></td>
+        <td><p>160</p></td>
+        <td><p>2048</p></td>
+        <td><p>4</p></td>
         <td><p>Admin</p></td>
         <td><p>2023-04-01 09:55</p></td>
         <td>
@@ -705,24 +688,6 @@
 </section>
 
 <script>
-  // search select
-  const selectedItem = document.querySelector('.selected-item')
-  const itemList = document.querySelectorAll('.item-list li')
-
-  selectedItem.addEventListener('click', (e) => {
-    if(e.currentTarget.className.indexOf('active') > -1) {
-      e.currentTarget.classList.remove('active')
-    } else {
-      e.currentTarget.classList.add('active')
-    }
-  }, false)
-
-  itemList.forEach((item, index) => {
-    item.addEventListener('click', (e) => {
-      selectedItem.classList.remove('active')
-    }, false)
-  })
-
   // More
   const btnMore = document.querySelector('.select-wrap button')
   const moreList = document.querySelector('.select-wrap .list-select-option')
@@ -844,10 +809,6 @@
 
   // remove all "active"
   window.addEventListener('click', (e) => {
-    if( !e.target.closest('.form-select') ) {
-      selectedItem.classList.remove('active')
-    }
-
     if( !e.target.closest('.table-quick-menu') ) {
       quickMenuBtnList.forEach((removeBtn, removeBtnIndex) => {
         removeBtn.classList.remove('active')

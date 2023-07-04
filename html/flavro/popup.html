@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>이미지 생성</title>
+  <title>Flavro 생성</title>
   <link rel="stylesheet" href="../../css/common.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <article class="modal scrollable">
       <!-- Start : Modal Header -->
       <div class="modal-header">
-        <h2 class="modal-title">이미지 생성</h2>
+        <h2 class="modal-title">Flavro</h2>
         <button type="button" class="btn-modal-close"><img src="../../images/icons/ico-close-square.svg" alt="close"></button>
       </div>
       <!-- End : Modal Header -->
@@ -34,147 +34,86 @@
           </div>
           <!-- End : 이름 -->
 
-          <!-- Start : Image -->
-          <div class="content-box w-100">
-            <label aria-required>이미지</label>
-            <div class="d-flex flex-1 gap-24 align-start">
-              <!-- Start : Image Select -->
-              <div class="swiper-os-item-wrap">
-                <ul class="os-item-list">
-                  <li>
-                    <input type="radio" name="slide-item" id="slide-item-1" checked />
-                    <label for="slide-item-1">
-                      <span><img src="../../images/icons/ico-linux.svg" alt=""></span>
-                      Linux
-                    </label>
-                  </li>
-                  <li>
-                    <input type="radio" name="slide-item" id="slide-item-2" />
-                    <label for="slide-item-2">
-                      <span><img src="../../images/icons/ico-windows.svg" alt=""></span>
-                      Windows
-                    </label>
-                  </li>
-                  <li>
-                    <input type="radio" name="slide-item" id="slide-item-3" />
-                    <label for="slide-item-3">
-                      <span><img src="../../images/icons/ico-server-other.svg" alt=""></span>
-                      Other
-                    </label>
-                  </li>
-                </ul>
-
-                <button type="button" class="btn-prev" disabled><span>이전</span></button>
-                <button type="button" class="btn-next"><span>다음</span></button>
-              </div>
-              <!-- End : Image Select -->
-
-              <!-- Start : Multi line select-box -->
-              <div class="select-list-box">
-                <div class="selected-item" style="height: 94px">
-                  <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
-                  <p>
-                    <strong>Ubuntu 20.01</strong>
-                    <span>64비트 (x86)</span>
-                  </p>
-                </div>
-
-                <ul class="select-list scroll-gray">
-                  <li class="selected">
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
-                    <p>
-                      <strong>Ubuntu 20.01</strong>
-                      <span>64비트 (x86)</span>
-                    </p>
-                  </li>
-                  <li>
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
-                    <p>
-                      <strong>Ubuntu 20.02</strong>
-                      <span>64비트 (x86)</span>
-                    </p>
-                  </li>
-                  <li>
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
-                    <p>
-                      <strong>Ubuntu 20.03</strong>
-                      <span>64비트 (x86)</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <!-- End : Multi line select-box -->
-            </div>
-          </div>
-          <!-- End : Image -->
-
           <div class="d-flex flex-1 gap-24 align-start w-100">
 
-            <!-- Start : CPU 타입 -->
+            <!-- Start : CPU -->
             <div class="content-box">
-              <label>CPU 타입</label>
+              <label>CPU</label>
 
-              <div class="select-list-box">
-                <div class="selected-item single">
-                  <p>
-                    <strong></strong>
-                  </p>
-                </div>
-
-                <ul class="select-list scroll-gray">
-                  <li class="selected">
-                    <p>
-                      <strong>CPU Type 1</strong>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <strong>CPU Type 2</strong>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <strong>CPU Type 3</strong>
-                    </p>
-                  </li>
-                </ul>
+              <div class="form-counter">
+                <button type="button" class="btn-minus"><img src="../../images/icons/ico-minus-small.svg" alt="minus"></button>
+                <input type="text" value="0" />
+                <button type="button" class="btn-plus"><img src="../../images/icons/ico-plus-small.svg" alt="plus"></button>
               </div>
             </div>
-            <!-- End : CPU 타입 -->
+            <!-- End : CPU -->
 
-            <!-- Start : 부트 타입 -->
+            <!-- Start : RAM -->
             <div class="content-box">
-              <label>부트 타입</label>
+              <label>RAM</label>
 
-              <!-- Start : Multi line select-box -->
-              <div class="select-list-box">
-                <div class="selected-item single">
-                  <p>
-                    <strong></strong>
-                  </p>
+              <div class="d-flex flex-1 gap-12">
+                <input type="text">
+                <div class="form-slide-toggle">
+                  <input type="checkbox" name="slide-toggle-1" id="slide-toggle-1">
+                  <label for="slide-toggle-1">
+                    <em>GB</em>
+                    <span><!-- slide --></span>
+                    <em>MB</em>
+                  </label>
                 </div>
-
-                <ul class="select-list scroll-gray">
-                  <li class="selected">
-                    <p>
-                      <strong>부트 타입 1</strong>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <strong>부트 타입 2</strong>
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <strong>부트 타입 3</strong>
-                    </p>
-                  </li>
-                </ul>
               </div>
             </div>
-            <!-- End : 부트 타입 -->
+            <!-- End : RAM -->
           </div>
+
+          <!-- Start : 루트 디스크 (GB) -->
+          <div class="content-box">
+            <label>루트 디스크 (GB)</label>
+
+            <div class="form-range">
+              <div class="range">
+                <input type="range" max="100">
+                <div class="range-label">
+                  <span>0</span>
+                  <span>20</span>
+                  <span>40</span>
+                  <span>80</span>
+                  <span>160</span>
+                  <span>320</span>
+                </div>
+              </div>
+              <div class="value">
+                <input type="text">
+                <span>GB</span>
+              </div>
+            </div>
+          </div>
+          <!-- End : 루트 디스크 (GB) -->
+
+          <!-- Start : 임시 디스크 (GB) -->
+          <div class="content-box">
+            <label>임시 디스크 (GB)</label>
+
+            <div class="form-range">
+              <div class="range">
+                <input type="range" max="100">
+                <div class="range-label">
+                  <span>0</span>
+                  <span>20</span>
+                  <span>40</span>
+                  <span>80</span>
+                  <span>160</span>
+                  <span>320</span>
+                </div>
+              </div>
+              <div class="value">
+                <input type="text">
+                <span>GB</span>
+              </div>
+            </div>
+          </div>
+          <!-- End : 임시 디스크 (GB) -->
 
           <div class="d-flex flex-1 gap-24 align-start w-100">
             <!-- Start : 리얼 타임 -->
@@ -306,6 +245,45 @@
   </section>
 </div>
 <script>
+  const sliderElList = document.querySelectorAll('.form-range')
+
+  sliderElList.forEach((sliderEl, index) => {
+    sliderEl.children[0].children[0].addEventListener("input", (event) => {
+      const tempSliderValue = event.target.value;
+      const progress = (tempSliderValue / event.target.max) * 100;
+
+      if(sliderEl.children[1]) {
+        sliderEl.children[1].children[0].value = event.target.value;
+      }
+
+      event.target.style.background = `linear-gradient(to right, #55BC8A ${progress}%, #EFF4F9 ${progress}%)`;
+    })
+
+    sliderEl.children[0].children[0].style.background = `linear-gradient(to right, #55BC8A 50%, #EFF4F9 50%)`;
+    if(sliderEl.children[1]) {
+      sliderEl.children[1].children[0].value = sliderEl.children[0].children[0].value;
+    }
+  })
+</script>
+<script>
+  // counter
+  const counterList = document.querySelectorAll('.form-counter')
+
+  counterList.forEach((counter, index) => {
+    console.log('counter.children : ' , counter.children)
+    const btnMinus = counter.children[0];
+    const inputForm = counter.children[1];
+    const btnPlus = counter.children[2];
+
+    btnMinus.addEventListener('click', () => {
+      inputForm.value--
+    }, false)
+
+    btnPlus.addEventListener('click', () => {
+      inputForm.value++
+    }, false)
+  })
+
   // table quick menu
   const selectedItems = document.querySelectorAll('.select-list-box .selected-item')
   const selectItemList = document.querySelectorAll('.select-list-box .select-list li')
