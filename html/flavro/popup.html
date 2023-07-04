@@ -116,111 +116,214 @@
           <!-- End : 임시 디스크 (GB) -->
 
           <div class="d-flex flex-1 gap-24 align-start w-100">
-            <!-- Start : 리얼 타임 -->
+            <!-- Start : GPU -->
             <div class="content-box">
-              <label>리얼 타임</label>
+              <label>GPU</label>
 
-              <!-- Start : Multi line select-box -->
-              <div class="d-flex justify-start gap-24">
-                <div class="form-radio">
-                  <input type="radio" name="rdo-use-yn" value="Y" id="rdo-use-y" checked />
-                  <label for="rdo-use-y">사용</label>
+              <div class="box-radius bg-lightgray none-shadow p-12">
+                <div class="box-radius box-line none-shadow px-12 mb-12">
+                  <table class="tbl-list">
+                    <caption>네트워크 목록</caption>
+                    <colgroup>
+                      <col style="width: 40px" />
+                      <col style="width: auto" />
+                      <col style="width: 215px" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>
+                        <div class="form-check">
+                          <input type="checkbox" name="chk-1" id="chk-1"/>
+                          <label for="chk-1"></label>
+                        </div>
+                      </th>
+                      <th><strong>이름</strong></th>
+                      <th><strong>개수</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input type="checkbox" name="chk-2" id="chk-2"/>
+                          <label for="chk-2"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="select-list-box">
+                          <div class="selected-item single">
+                            <p>
+                              <strong>sdewew</strong>
+                            </p>
+                          </div>
+
+                          <ul class="select-list scroll-gray">
+                            <li class="selected">
+                              <p>
+                                <strong>sdewew 1</strong>
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <strong>sdewew 2</strong>
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <strong>sdewew 3</strong>
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-counter">
+                          <button type="button" class="btn-minus"><img src="../../images/icons/ico-minus-small.svg" alt="minus"></button>
+                          <input type="text" value="0" />
+                          <button type="button" class="btn-plus"><img src="../../images/icons/ico-plus-small.svg" alt="plus"></button>
+                        </div>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div class="form-radio">
-                  <input type="radio" name="rdo-use-yn" value="N" id="rdo-use-n" />
-                  <label for="rdo-use-n">미사용</label>
+
+                <div class="d-flex justify-end gap-4">
+                  <button type="button" class="btn btn-default">삭제</button>
+                  <button type="button" class="btn btn-default">추가</button>
                 </div>
               </div>
             </div>
-            <!-- End : 리얼 타임 -->
+            <!-- End : GPU -->
+          </div>
 
-            <!-- Start : 버전 -->
+          <div class="d-flex flex-1 gap-24 align-start w-100">
+            <!-- Start : 호스트  디바이스 -->
             <div class="content-box">
-              <label>버전</label>
+              <label>호스트  디바이스</label>
 
-              <!-- Start : Multi line select-box -->
-              <div class="select-list-box">
-                <div class="selected-item single">
-                  <p>
-                    <strong></strong>
-                  </p>
+              <div class="box-radius bg-lightgray none-shadow p-12">
+                <div class="box-radius box-line none-shadow px-12 mb-12">
+                  <table class="tbl-list">
+                    <caption>네트워크 목록</caption>
+                    <colgroup>
+                      <col style="width: 40px" />
+                      <col style="width: auto" />
+                      <col style="width: 215px" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th>
+                        <div class="form-check">
+                          <input type="checkbox" name="chk-2-1" id="chk-2-1"/>
+                          <label for="chk-2-1"></label>
+                        </div>
+                      </th>
+                      <th><strong>이름</strong></th>
+                      <th><strong>개수</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input type="checkbox" name="chk-2-2" id="chk-2-2"/>
+                          <label for="chk-2-2"></label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="select-list-box">
+                          <div class="selected-item single">
+                            <p>
+                              <strong>sdewew</strong>
+                            </p>
+                          </div>
+
+                          <ul class="select-list scroll-gray">
+                            <li class="selected">
+                              <p>
+                                <strong>sdewew 1</strong>
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <strong>sdewew 2</strong>
+                              </p>
+                            </li>
+                            <li>
+                              <p>
+                                <strong>sdewew 3</strong>
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-counter">
+                          <button type="button" class="btn-minus"><img src="../../images/icons/ico-minus-small.svg" alt="minus"></button>
+                          <input type="text" value="0" />
+                          <button type="button" class="btn-plus"><img src="../../images/icons/ico-plus-small.svg" alt="plus"></button>
+                        </div>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </div>
 
-                <ul class="select-list scroll-gray">
-                  <li class="selected">
-                    <p>
-                      <strong>버전 1</strong>
-                    </p>
+                <div class="d-flex justify-end gap-4">
+                  <button type="button" class="btn btn-default">삭제</button>
+                  <button type="button" class="btn btn-default">추가</button>
+                </div>
+              </div>
+            </div>
+            <!-- End : 호스트  디바이스 -->
+          </div>
+
+          <div class="d-flex flex-1 gap-24 align-start w-100">
+            <!-- Start : EXTRSPEC -->
+            <div class="content-box">
+              <label>EXTRSPEC <button type="button"><img src="../../images/icons/ico-info-round.svg" alt="information"></button></label>
+
+              <div class="box-radius bg-lightgray none-shadow p-12">
+                <ul class="check-list scroll-gray">
+                  <li>
+                    <div class="form-check">
+                      <input type="checkbox" name="chk-3-1" id="chk-3-1">
+                      <label for="chk-3-1">hugepage</label>
+                    </div>
                   </li>
                   <li>
-                    <p>
-                      <strong>버전 2</strong>
-                    </p>
+                    <div class="form-check">
+                      <input type="checkbox" name="chk-3-2" id="chk-3-2">
+                      <label for="chk-3-2">cup-pinning</label>
+                    </div>
                   </li>
                   <li>
-                    <p>
-                      <strong>버전 3</strong>
-                    </p>
+                    <div class="form-check">
+                      <input type="checkbox" name="chk-3-3" id="chk-3-3">
+                      <label for="chk-3-3">etc</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <input type="checkbox" name="chk-3-4" id="chk-3-4">
+                      <label for="chk-3-4">hugepage 21</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <input type="checkbox" name="chk-3-5" id="chk-3-5">
+                      <label for="chk-3-5">hugepage 12</label>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- End : 버전 -->
-          </div>
-
-          <!-- Start : 공개여부 -->
-          <div class="content-box" style="width: calc(50% - 12px)">
-            <label>공개여부</label>
-
-            <div class="select-list-box">
-              <div class="selected-item single">
-                <p>
-                  <strong>프라이빗</strong>
-                </p>
-              </div>
-
-              <ul class="select-list scroll-gray">
-                <li class="selected">
-                  <p>
-                    <strong>프라이빗</strong>
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>퍼블릭</strong>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- End : 공개여부 -->
-
-          <div class="d-flex flex-1 gap-24 align-start w-100">
-            <div class="content-box">
-              <label>사용자 이름</label>
-
-              <input type="text" />
-            </div>
-
-            <div class="content-box">
-              <label>패스워드</label>
-
-              <input type="text" />
-            </div>
-          </div>
-
-          <div class="content-box">
-            <label>소스</label>
-
-            <div class="form-text icon">
-              <strong class="badge">Docker</strong>
-              <input type="text" value="docker://quay.io/edgestack/centos-7-container-disk:latest" />
-              <button type="button"><img src="../../images/icons/ico-cube.svg" alt="큐브"></button>
-            </div>
+            <!-- End : EXTRSPEC -->
           </div>
 
           <!-- Start : Description -->
-          <div class="content-box">
+          <div class="content-box m-0">
             <label>설명</label>
             <div class="input-byte">
               <input type="text" placeholder="입력해 주세요." />
@@ -245,6 +348,7 @@
   </section>
 </div>
 <script>
+  // range slider
   const sliderElList = document.querySelectorAll('.form-range')
 
   sliderElList.forEach((sliderEl, index) => {
@@ -264,8 +368,7 @@
       sliderEl.children[1].children[0].value = sliderEl.children[0].children[0].value;
     }
   })
-</script>
-<script>
+
   // counter
   const counterList = document.querySelectorAll('.form-counter')
 
@@ -284,7 +387,7 @@
     }, false)
   })
 
-  // table quick menu
+  // table select box
   const selectedItems = document.querySelectorAll('.select-list-box .selected-item')
   const selectItemList = document.querySelectorAll('.select-list-box .select-list li')
 
