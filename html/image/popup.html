@@ -7,13 +7,13 @@
 </head>
 <body>
 <div class="content-wrapper">
-  <section class="modal-wrap" style="display: flex;">
+  <section class="modal-wrap" style="display: flex">
     <!-- Start : Modal -->
     <article class="modal scrollable">
       <!-- Start : Modal Header -->
       <div class="modal-header">
         <h2 class="modal-title">이미지 생성</h2>
-        <button type="button" class="btn-modal-close"><img src="../../images/icons/ico-close-square.svg" alt="close"></button>
+        <button type="button" class="btn-modal-close"><i class="ico ico-close-square"></i></button>
       </div>
       <!-- End : Modal Header -->
 
@@ -29,7 +29,7 @@
               <span>0 / 50</span>
             </div>
             <p class="caution">
-              <img src="../../images/icons/ico-info-circle-small.svg" alt="">문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
+              <IconInfo />문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
             </p>
           </div>
           <!-- End : 이름 -->
@@ -44,21 +44,21 @@
                   <li>
                     <input type="radio" name="slide-item" id="slide-item-1" checked />
                     <label for="slide-item-1">
-                      <span><img src="../../images/icons/ico-linux.svg" alt=""></span>
+                      <span><i class="ico ico-linux"></i></span>
                       Linux
                     </label>
                   </li>
                   <li>
                     <input type="radio" name="slide-item" id="slide-item-2" />
                     <label for="slide-item-2">
-                      <span><img src="../../images/icons/ico-windows.svg" alt=""></span>
+                      <span><i class="ico ico-windows"></i></span>
                       Windows
                     </label>
                   </li>
                   <li>
                     <input type="radio" name="slide-item" id="slide-item-3" />
                     <label for="slide-item-3">
-                      <span><img src="../../images/icons/ico-server-other.svg" alt=""></span>
+                      <span><i class="ico ico-server-other"></i></span>
                       Other
                     </label>
                   </li>
@@ -72,7 +72,7 @@
               <!-- Start : Multi line select-box -->
               <div class="select-list-box">
                 <div class="selected-item" style="height: 94px">
-                  <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                  <i class="icon"><i class="ico ico-ubuntu"></i></i>
                   <p>
                     <strong>Ubuntu 20.01</strong>
                     <span>64비트 (x86)</span>
@@ -81,21 +81,21 @@
 
                 <ul class="select-list scroll-gray">
                   <li class="selected">
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                    <i class="icon"><i class="ico ico-ubuntu"></i></i>
                     <p>
                       <strong>Ubuntu 20.01</strong>
                       <span>64비트 (x86)</span>
                     </p>
                   </li>
                   <li>
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                    <i class="icon"><i class="ico ico-ubuntu"></i></i>
                     <p>
                       <strong>Ubuntu 20.02</strong>
                       <span>64비트 (x86)</span>
                     </p>
                   </li>
                   <li>
-                    <i class="icon"><img src="../../images/icons/ico-ubuntu.svg" alt="ubuntu"></i>
+                    <i class="icon"><i class="ico ico-ubuntu"></i></i>
                     <p>
                       <strong>Ubuntu 20.03</strong>
                       <span>64비트 (x86)</span>
@@ -230,28 +230,30 @@
           </div>
 
           <!-- Start : 공개여부 -->
-          <div class="content-box" style="width: calc(50% - 12px)">
-            <label>공개여부</label>
+          <div class="d-flex gap-24 align-start w-100">
+            <div class="content-box" style="width: calc(50% - 12px)">
+              <label>공개여부</label>
 
-            <div class="select-list-box">
-              <div class="selected-item single">
-                <p>
-                  <strong>프라이빗</strong>
-                </p>
-              </div>
-
-              <ul class="select-list scroll-gray">
-                <li class="selected">
+              <div class="select-list-box">
+                <div class="selected-item single">
                   <p>
                     <strong>프라이빗</strong>
                   </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>퍼블릭</strong>
-                  </p>
-                </li>
-              </ul>
+                </div>
+
+                <ul class="select-list scroll-gray">
+                  <li class="selected">
+                    <p>
+                      <strong>프라이빗</strong>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>퍼블릭</strong>
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- End : 공개여부 -->
@@ -276,7 +278,7 @@
             <div class="form-text icon">
               <strong class="badge">Docker</strong>
               <input type="text" value="docker://quay.io/edgestack/centos-7-container-disk:latest" />
-              <button type="button"><img src="../../images/icons/ico-cube.svg" alt="큐브"></button>
+              <button type="button"><i class="ico ico-cube"></i></button>
             </div>
           </div>
 
@@ -288,7 +290,7 @@
               <span>0 / 50</span>
             </div>
             <p class="caution">
-              <img src="../../images/icons/ico-info-circle-small.svg" alt="">문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
+              <i class="ico ico-info-circle-small"></i>문자, 숫자, 특수기호 입력이 가능합니다. 최대 길이 50자 입니다.
             </p>
           </div>
           <!-- End : Description -->

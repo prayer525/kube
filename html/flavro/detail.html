@@ -24,12 +24,12 @@
             <button type="button" class="btn btn-default">More ▾</button>
 
             <ul class="list-select-option">
-              <li><i><img src="../../images/icons/ico-server.svg" alt=""></i><span>VNC 접속</span></li>
-              <li><i><img src="../../images/icons/ico-pie-chart.svg" alt=""></i><span>FIP 할당</span></li>
-              <li><i><img src="../../images/icons/ico-code.svg" alt=""></i><span>YAML 보기</span></li>
-              <li><i><img src="../../images/icons/ico-list.svg" alt=""></i><span>Console 로그</span></li>
-              <li><i><img src="../../images/icons/ico-download.svg" alt=""></i><span>마이그레이션</span></li>
-              <li><i><img src="../../images/icons/ico-trash.svg" alt=""></i><span>삭제</span></li>
+              <li><i class="ico ico-server"></i><span>VNC 접속</span></li>
+              <li><i class="ico ico-pie-chart"></i><span>FIP 할당</span></li>
+              <li><i class="ico ico-code"></i><span>YAML 보기</span></li>
+              <li><i class="ico ico-list"></i><span>Console 로그</span></li>
+              <li><i class="ico ico-download"></i><span>마이그레이션</span></li>
+              <li><i class="ico ico-trash"></i><span>삭제</span></li>
             </ul>
           </div>
         </div>
@@ -116,9 +116,7 @@
 
         <div class="round-box">
           <div class="round-summary-box">
-            <i><img src="../../images/icons/ico-dbl-square-large.svg" alt=""></i>
-
-            <button type="button"><img src="../../images/icons/ico-arrow-clamp-down.svg" alt="open"></button>
+            <button type="button"><i class="ico ico-arrow-clamp-down"></i></button>
 
             <div class="desc-text">
               <div>
@@ -149,7 +147,7 @@
 
           <div class="round-detail-box">
             <div class="round-container-box">
-              <h3><img src="../../images/icons/ico-search.svg" alt="">Containers</h3>
+              <h3><i class="ico ico-search"></i>Containers</h3>
               <div class="round-container">
                 <div>
                   <strong>kubectl</strong>
@@ -171,7 +169,7 @@
             </div>
 
             <div class="round-container-box">
-              <h3><img src="../../images/icons/ico-search.svg" alt="">Containers</h3>
+              <h3><i class="ico ico-search"></i>Containers</h3>
               <div class="round-container">
                 <div>
                   <strong>kubectl</strong>
@@ -217,20 +215,19 @@
   }, false)
 
   // Show detail
-  const btnDetail = document.querySelector('.round-summary-box > button img')
+  const btnDetail = document.querySelector('.round-summary-box > button i')
   const areaSummary = document.querySelector('.round-summary-box')
   const areaDetail = document.querySelector('.round-detail-box')
 
   areaSummary.addEventListener('click', () => {
     if (areaDetail.className.indexOf('active') > -1) {
       areaDetail.classList.remove('active')
-      btnDetail.src = '../../images/icons/ico-arrow-clamp-down.svg'
+      btnDetail.classList.remove('ico-arrow-clamp-up')
     } else {
       areaDetail.classList.add('active')
-      btnDetail.src = '../../images/icons/ico-arrow-clamp-up.svg'
+      btnDetail.classList.add('ico-arrow-clamp-up')
     }
   })
-
 
   // remove all "active"
   window.addEventListener('click', (e) =>{

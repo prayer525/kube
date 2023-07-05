@@ -300,6 +300,46 @@ table {
     cursor: no-drop !important;
 }
 
+.ico {display: flex; justify-content: center; align-items: center;}
+
+.ico.ico-server {background:url('../images/icons/ico-server.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-pie-chart {background:url('../images/icons/ico-pie-chart.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-code {background:url('../images/icons/ico-code.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-list {background:url('../images/icons/ico-list.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-download {background:url('../images/icons/ico-download.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-trash {background:url('../images/icons/ico-trash.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-arrow-clamp-down {background:url('../images/icons/ico-arrow-clamp-down.svg') center no-repeat; width: 10px; height: 7px;}
+.ico.ico-arrow-clamp-up {background:url('../images/icons/ico-arrow-clamp-up.svg') center no-repeat; width: 10px; height: 7px;}
+.ico.ico-search {background:url('../images/icons/ico-search.svg') center no-repeat; background-size: contain; width: 24px; height: 24px;}
+.ico.ico-eye-close {background:url('../images/icons/ico-eye-close.svg') center no-repeat; width: 16px; height: 7px;}
+.ico.ico-eye-open {background:url('../images/icons/ico-eye-open.svg') center no-repeat; width: 16px; height: 12px;}
+.ico.ico-eye-close-big {background:url('../images/icons/ico-eye-close-big.svg') center no-repeat; width: 18px; height: 12px;}
+.ico.ico-page-title {background:url('../images/icons/ico-page-title.svg') center no-repeat; width: 60px; height: 60px;}
+.ico.ico-search-small {background:url('../images/icons/ico-search-small.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-close-small {background:url('../images/icons/ico-close-small.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-refresh {background:url('../images/icons/ico-refresh.svg') center no-repeat; width: 12px; height: 13px;}
+.ico.ico-gear {background:url('../images/icons/ico-gear.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-dbl-square {background:url('../images/icons/ico-dbl-square.svg') center no-repeat; width: 24px; height: 24px;}
+.ico.ico-dot-menu {background:url('../images/icons/ico-dot-menu.svg') center no-repeat; width: 4px; height: 13px;}
+.ico.ico-quick-start {background:url('../images/icons/ico-quick-start.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-quick-restart {background:url('../images/icons/ico-quick-restart.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-quick-pause {background:url('../images/icons/ico-quick-pause.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-quick-stop  {background:url('../images/icons/ico-quick-stop.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-quick-trash {background:url('../images/icons/ico-quick-trash.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-arrow-long-left {background:url('../images/icons/ico-arrow-long-left.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-arrow-long-right {background:url('../images/icons/ico-arrow-long-right.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-close-square {background:url('../images/icons/ico-close-square.svg') center no-repeat; width: 32px; height: 32px;}
+.ico.ico-info-circle-small {background:url('../images/icons/ico-info-circle-small.svg') center no-repeat; width: 14px; height: 14px;}
+.ico.ico-minus-small {background:url('../images/icons/ico-minus-small.svg') center no-repeat; width: 16px; height: 2px;}
+.ico.ico-plus-small {background:url('../images/icons/ico-plus-small.svg') center no-repeat; width: 8px; height: 8px;}
+.ico.ico-info-round {background:url('../images/icons/ico-info-round.svg') center no-repeat; width: 16px; height: 16px;}
+.ico.ico-arrow-down-gray {background:url('../images/icons/ico-arrow-down-gray.svg') center no-repeat; width: 10px; height: 6px;}
+.ico.ico-ubuntu {background:url('../images/icons/ico-ubuntu.svg') center no-repeat; width: 24px; height: 24px;}
+.ico.ico-linux {background:url('../images/icons/ico-linux.svg') center no-repeat; width: 32px; height: 36px;}
+.ico.ico-windows {background:url('../images/icons/ico-windows.svg') center no-repeat; width: 36px; height: 36px;}
+.ico.ico-server-other {background:url('../images/icons/ico-server-other.svg') center no-repeat; width: 36px; height: 36px;}
+.ico.ico-cube {background:url('../images/icons/ico-cube.svg') center no-repeat; width: 14px; height: 16px;}
+
 .content-wrapper {background: #eff4f9; padding: 20px; min-height: 100vh}
 
 .w-100 {width: 100% !important;}
@@ -367,7 +407,7 @@ h2.h2-bullet-home {background: url('../images/icons/ico-bullet-home.svg') 3px ce
 *.btn.btn-cancel {flex: 0 0 auto !important; border: 1px solid #ca2621; background: #ca2621; color: #fff;}
 
 p.caution {position: relative; line-height: 20px; color: #79879c; font-size: 12px; padding-left: 20px; margin-top: 4px;}
-p.caution img {position: absolute; top: 3px; left: 0;}
+p.caution i {position: absolute; top: 3px; left: 0;}
 
 .select-wrap {position: relative;}
 .select-wrap ul.list-select-option {display: none; border-radius: 4px; background: #242e42; box-shadow: 0 4px 8px rgba(36, 46, 6, 0.06); position: absolute; top: calc(100% + 8px); left: 0; min-width: 100%; width: 211px; padding: 8px;}
@@ -641,7 +681,7 @@ select {border: 1px solid #abb4be; border-radius: 4px; background: #fff url('../
 .status-list li span {line-height: 20px; color: #79879c; font-size: 12px;}
 
 .round-box {border: 1px solid #CCD3DB; border-radius: 4px; box-shadow: 0 4px 8px 0 rgba(36, 46, 6, 0.06); background: #ffffff; padding: 12px 16px; margin-top: 12px;}
-.round-box .round-summary-box {position: relative; display: flex; justify-content: space-between; align-content: center; padding: 0 102px 0 76px;}
+.round-box .round-summary-box {position: relative; display: flex; justify-content: space-between; align-content: center; background: url('../images/icons/ico-dbl-square-large.svg') left 16px center no-repeat; padding: 0 102px 0 76px;}
 .round-box .round-summary-box > i {position: absolute; top: 50%; left: 16px; transform: translateY(-50%);}
 .round-box .round-summary-box > button {position: absolute; top: 50%; right: 32px; transform: translateY(-50%);}
 .round-box .round-detail-box {display: none; border-radius: 4px; background: #F9FBFD; padding: 12px 16px;}
